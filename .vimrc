@@ -11,38 +11,40 @@ endfor
 " ------------------------------
 " Vundle
 " ------------------------------
-set runtimepath+=$HOME/.vim/bundle/vundle/
-call vundle#rc()
+"set runtimepath+=$HOME/.vim/bundle/vundle/
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+"call vundle#rc()
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 " ------------------------------
 " plugins
 " ------------------------------
-Bundle 'gmarik/vundle'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimfiler'
-Bundle 'Shougo/vimproc'
-Bundle 'thinca/vim-quickrun'
-Bundle 'tsaleh/vim-align'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-markdown'
-Bundle 'tyru/open-browser.vim'
-Bundle 'fuenor/qfixhowm'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/vimplenote-vim'
-Bundle 'mattn/learn-vimscript'
-Bundle 'motemen/hatena-vim'
-Bundle 'sudo.vim'
-Bundle 'mru.vim'
-Bundle 'TwitVim'
-Bundle 'koron/chalice'
-Bundle 'altercation/vim-colors-solarized'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tsaleh/vim-align'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'fuenor/qfixhowm'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/vimplenote-vim'
+NeoBundle 'mattn/learn-vimscript'
+NeoBundle 'motemen/hatena-vim'
+NeoBundle 'sudo.vim'
+NeoBundle 'mru.vim'
+NeoBundle 'TwitVim'
+NeoBundle 'koron/chalice'
+NeoBundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 " ------------------------------
 " plugins settings
 " ------------------------------
-"set shellslash
+set shellslash
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 0
 " unite.vim
