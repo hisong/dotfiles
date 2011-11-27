@@ -11,9 +11,7 @@ endfor
 " ------------------------------
 " Vundle
 " ------------------------------
-"set runtimepath+=$HOME/.vim/bundle/vundle/
 set runtimepath+=~/.vim/bundle/neobundle.vim/
-"call vundle#rc()
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 " ------------------------------
