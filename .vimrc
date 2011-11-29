@@ -26,7 +26,9 @@ call vundle#rc()
 " SKK settings
 " ------------------------------
 if has('vim_starting')
-    let g:eskk#large_dictionary = "~/.eskk/SKK-JISYO.L"
+    let g:eskk#directory = "~/.eskk"
+    let g:eskk#dictionary = { 'path': "~/.skk-jisyo", 'sorted': 0, 'encoding': 'utf-8', }
+    let g:eskk#large_dictionary = { 'path': "~/.eskk/SKK-JISYO.L", 'sorted': 1, 'encoding': 'euc-jp', }
 endif
 
 " ------------------------------
@@ -64,6 +66,13 @@ filetype plugin indent on
 "set shellslash
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_auto_completion_start_length = 2
+let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_max_list = 100
+inoremap <expr><C-y> pumvisible() ? neocomplcache#close_popup() : "\<C-y>"
+inoremap <expr><C-e> pumvisible() ? neocomplcache#cancel_popup() : "\<C-e>"
+
 " unite.vim
 let g:unite_enable_start_insert = 1
 " vimfiler
