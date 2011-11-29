@@ -9,44 +9,61 @@ for path in split(glob($VIM.'/plugins/*'), '\n')
 endfor
 
 " ------------------------------
-" NeoBundle
+" Vundle
+" ------------------------------
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"" ------------------------------
+"" NeoBundle
+"" ------------------------------
+"if has('vim_starting')
+"    set runtimepath+=~/.vim/bundle/neobundle.vim/
+"    call neobundle#rc(expand('~/.vim/bundle/'))
+"endif
+
+" ------------------------------
+" SKK settings
 " ------------------------------
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-    call neobundle#rc(expand('~/.vim/bundle/'))
+    let g:eskk#large_dictionary = "~/.eskk/SKK-JISYO.L"
 endif
 
 " ------------------------------
 " plugins
 " ------------------------------
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tsaleh/vim-align'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'fuenor/qfixhowm'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/vimplenote-vim'
-NeoBundle 'mattn/learn-vimscript'
-NeoBundle 'motemen/hatena-vim'
-NeoBundle 'sudo.vim'
-NeoBundle 'mru.vim'
-NeoBundle 'TwitVim'
-NeoBundle 'koron/chalice'
-NeoBundle 'altercation/vim-colors-solarized'
+Bundle 'gmarik/vundle'
+"NeoBundle 'Shougo/neobundle.vim'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimfiler'
+Bundle 'Shougo/vimproc'
+Bundle 'thinca/vim-quickrun'
+Bundle 'tsaleh/vim-align'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-markdown'
+Bundle 'tyru/savemap.vim'
+Bundle 'tyru/vice.vim'
+Bundle 'tyru/eskk.vim'
+Bundle 'tyru/open-browser.vim'
+Bundle 'fuenor/qfixhowm'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/vimplenote-vim'
+Bundle 'mattn/learn-vimscript'
+Bundle 'motemen/hatena-vim'
+Bundle 'sudo.vim'
+Bundle 'mru.vim'
+Bundle 'TwitVim'
+Bundle 'koron/chalice'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 " ------------------------------
 " plugins settings
 " ------------------------------
-set shellslash
+"set shellslash
 " neocomplcache
-let g:neocomplcache_enable_at_startup = 0
+let g:neocomplcache_enable_at_startup = 1
 " unite.vim
 let g:unite_enable_start_insert = 1
 " vimfiler
@@ -126,10 +143,10 @@ set shiftwidth=4
 " backup/swap
 " ------------------------------
 set backup
-set backupdir=$HOME/vimbackup
+set backupdir=~/vimbackup
 set browsedir=current
 set swapfile
-set directory=$HOME/vimbackup
+set directory=~/vimbackup
 
 " ------------------------------
 " encoding
