@@ -1,6 +1,5 @@
 " ------------------------------
-" display
-" ------------------------------
+" display " {{{
 set lines=40
 if has('win32')
   set columns=128
@@ -14,10 +13,10 @@ set guioptions-=r
 set guicursor=a:blinkon0
 set visualbell t_vb=
 colorscheme solarized
+" }}}
 
 " ------------------------------
-" font
-" ------------------------------
+" font " {{{
 if has('win32')
   set guifont=MeiryoKe_Gothic:h10
 elseif has('xfontset')
@@ -28,3 +27,6 @@ if has('printer')
     set printfont=MeiryoKe_Gothic:h10
   endif
 endif
+" }}}
+
+" vim: foldmethod=marker

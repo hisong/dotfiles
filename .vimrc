@@ -2,42 +2,33 @@ set nocompatible
 filetype off
 
 " ------------------------------
-" runtimepath
-" ------------------------------
+" runtimepath " {{{
 for path in split(glob($VIM.'/plugins/*'), '\n')
     if isdirectory(path) | let &runtimepath = &runtimepath.','.path | end
 endfor
+" }}}
 
 " ------------------------------
-" Vundle
-" ------------------------------
+" Vundle " {{{
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+" }}}
 
-"" ------------------------------
-"" NeoBundle
-"" ------------------------------
+" ------------------------------
+" NeoBundle " {{{
 "if has('vim_starting')
 "    set runtimepath+=~/.vim/bundle/neobundle.vim/
 "    call neobundle#rc(expand('~/.vim/bundle/'))
 "endif
+" }}}
 
 " ------------------------------
-" SKK settings
-" ------------------------------
-if has('vim_starting')
-    let g:eskk#directory = "~/.eskk"
-    let g:eskk#dictionary = { 'path': "~/.skk-jisyo", 'sorted': 0, 'encoding': 'utf-8', }
-    let g:eskk#large_dictionary = { 'path': "~/.eskk/SKK-JISYO.L", 'sorted': 1, 'encoding': 'euc-jp', }
-endif
-
-" ------------------------------
-" plugins
-" ------------------------------
+" plugins " {{{
 Bundle 'gmarik/vundle'
 "NeoBundle 'Shougo/neobundle.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimshell'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/vimproc'
 Bundle 'thinca/vim-quickrun'
@@ -52,6 +43,7 @@ Bundle 'fuenor/qfixhowm'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/vimplenote-vim'
 Bundle 'mattn/learn-vimscript'
+"Bundle 'tsukkee/lingr-vim'
 Bundle 'motemen/hatena-vim'
 Bundle 'sudo.vim'
 Bundle 'mru.vim'
@@ -60,36 +52,51 @@ Bundle 'koron/chalice'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
+" }}}
+
 " ------------------------------
-" plugins settings
-" ------------------------------
-"set shellslash
-" neocomplcache
+" plugins settings " {{{
+" neocomplcache " {{{
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_auto_completion_start_length = 2
-let g:neocomplcache_enable_auto_select = 1
 let g:neocomplcache_max_list = 100
 inoremap <expr><C-y> pumvisible() ? neocomplcache#close_popup() : "\<C-y>"
 inoremap <expr><C-e> pumvisible() ? neocomplcache#cancel_popup() : "\<C-e>"
+" }}}
 
-" unite.vim
+" unite.vim " {{{
 let g:unite_enable_start_insert = 1
-" vimfiler
+" }}}
+
+" vimfiler " {{{
 let g:vimfiler_as_default_explorer = 1
-" quickrun
+" }}}
+
+" SKK settings " {{{
+if has('vim_starting')
+    let g:eskk#directory = "~/.eskk"
+    let g:eskk#dictionary = { 'path': "~/.skk-jisyo", 'sorted': 0, 'encoding': 'utf-8', }
+    let g:eskk#large_dictionary = { 'path': "~/.eskk/SKK-JISYO.L", 'sorted': 1, 'encoding': 'euc-jp', }
+endif
+" }}}
+
+" quickrun " {{{
 let g:quickrun_config = {}
 let g:quickrun_config['markdown'] = {
     \ 'type': 'markdown/pandoc',
     \ 'outputter': 'browser'
     \ }
-" TwitVim
+" }}}
+
+" TwitVim " {{{
 let twitvim_api_root = "https://api.twitter.com/1"
 let twitvim_count = 100
+" }}}
+" }}}
 
 " ------------------------------
-" display
-" ------------------------------
+" display " {{{
 set cursorline
 set number
 set ruler
@@ -100,67 +107,67 @@ set showcmd
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set hidden
 set shortmess+=I
+" }}}
 
 " ------------------------------
-" syntax color
-" ------------------------------
+" syntax color " {{{
 syntax on
+" }}}
 
 " ------------------------------
-" search
-" ------------------------------
+" search " {{{
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+" }}}
 
 " ------------------------------
-" help priority
-" ------------------------------
+" help priority " {{{
 set helplang=ja,en
+" }}}
 
 " ------------------------------
-" print
-" ------------------------------
+" print " {{{
 set printoptions=header:0
+" }}}
 
 " ------------------------------
-" edit
-" ------------------------------
+" edit " {{{
 set autoindent
 set smartindent
 set showmatch
 set backspace=indent,eol,start
 set clipboard=unnamed
-set autochdir
+"set autochdir
+" }}}
 
 " ------------------------------
-" list
-" ------------------------------
+" list " {{{
 set list
 set listchars=eol:~,tab:>-,trail:-,nbsp:%,extends:>,precedes:<
+" }}}
 
 " ------------------------------
-" tab
-" ------------------------------
+" tab " {{{
 set tabstop=4
 set expandtab
 set smarttab
 set shiftwidth=4
+" }}}
 
 " ------------------------------
-" backup/swap
-" ------------------------------
+" backup/swap " {{{
 set backup
 set backupdir=~/vimbackup
 set browsedir=current
 set swapfile
 set directory=~/vimbackup
+" }}}
 
 " ------------------------------
-" encoding
+" encoding " {{{
 " > http://www.kawaz.jp/pukiwiki/?vim#cb691f26
-" ------------------------------
 if &encoding !=# 'utf-8'
     set encoding=japan
     set fileencoding=japan
@@ -216,16 +223,17 @@ set fileformats=unix,dos,mac
 if exists('&ambiwidth')
     set ambiwidth=double
 endif
+" }}}
 
 " ------------------------------
-" keymap
-" ------------------------------
+" keymap " {{{
 inoremap <C-s> <Esc>:w<CR>
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
 vnoremap v $h
 nnoremap <Esc><Esc> :noh<CR><Esc>
 nnoremap bb :ls<CR>:buf 
-nnoremap ,x :w<CR>:bd<CR>
+nnoremap ,s :w<CR>:bd<CR>
+nnoremap ,x :bd!<CR>
 nnoremap <silent> ,m :MRU<CR>
 nnoremap <silent> ,u :Unite buffer file_mru file<CR>
 nnoremap <silent> ,tf :FriendsTwitter<CR>
@@ -237,3 +245,6 @@ noremap j gj
 noremap k gk
 noremap <CR> i<CR><Esc>
 noremap J gJ
+" }}}
+
+" vim: foldmethod=marker
