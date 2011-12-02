@@ -50,6 +50,10 @@ Bundle 'mru.vim'
 Bundle 'TwitVim'
 Bundle 'koron/chalice'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'tomasr/molokai'
+Bundle 'fugalh/desert.vim'
+Bundle 'hallison/vim-darkdevel'
+Bundle 'Zenburn'
 
 filetype plugin indent on
 " }}}
@@ -139,7 +143,6 @@ set smartindent
 set showmatch
 set backspace=indent,eol,start
 set clipboard=unnamed
-"set autochdir
 " }}}
 
 " ------------------------------
@@ -167,7 +170,7 @@ set directory=~/vimbackup
 
 " ------------------------------
 " encoding " {{{
-" > http://www.kawaz.jp/pukiwiki/?vim#cb691f26
+"" > http://www.kawaz.jp/pukiwiki/?vim#cb691f26
 if &encoding !=# 'utf-8'
     set encoding=japan
     set fileencoding=japan
