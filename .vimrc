@@ -232,11 +232,11 @@ endif
 " keymap " {{{
 inoremap <C-s> <Esc>:w<CR>
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
-vnoremap v $h
-nnoremap <Esc><Esc> :noh<CR><Esc>
+vnoremap <silent> v $h
+nnoremap <silent> <Esc><Esc> :noh<CR><Esc>
 nnoremap bb :ls<CR>:buf 
-nnoremap ,s :w<CR>:bd<CR>
-nnoremap ,x :bd!<CR>
+nnoremap <silent> ,s :w<CR>:bd<CR>
+nnoremap <silent> ,x :bd!<CR>
 nnoremap <silent> ,m :MRU<CR>
 nnoremap <silent> ,u :Unite buffer file_mru file<CR>
 nnoremap <silent> ,tf :FriendsTwitter<CR>
@@ -244,10 +244,10 @@ nnoremap ,tl :ListTwitter
 nnoremap <silent> ,tn :NextTwitter<CR>
 nnoremap <silent> ,tp :PosttoTwitter<CR>
 noremap <C-s> :w<CR>
-noremap j gj
-noremap k gk
+noremap <silent> j gj
+noremap <silent> k gk
 noremap <CR> i<CR><Esc>
-noremap J gJ
+noremap <silent> J gJ
 " }}}
 
 " vim: foldmethod=marker
