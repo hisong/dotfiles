@@ -115,7 +115,7 @@ set shortmess+=I
 
 " ------------------------------
 " syntax color " {{{
-syntax on
+syntax enable
 " }}}
 
 " ------------------------------
