@@ -230,6 +230,7 @@ endif
 
 " ------------------------------
 " keymap " {{{
+let mapleader = ";"
 inoremap <C-s> <Esc>:w<CR>
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
 vnoremap <silent> v $h
