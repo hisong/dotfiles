@@ -12,9 +12,9 @@ set guioptions-=m
 set guioptions-=r
 set guicursor=a:blinkon0
 set visualbell t_vb=
-"colorscheme solarized
+colorscheme solarized
 "colorscheme molokai
-colorscheme desert
+"colorscheme desert
 "colorscheme darkdevel
 "colorscheme Zenburn
 " }}}
