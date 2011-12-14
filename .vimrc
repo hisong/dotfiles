@@ -116,12 +116,6 @@ set shortmess+=I
 " }}}
 
 " ------------------------------
-" display " {{{
-set showtabline=2
-set guioptions-=e
-" }}}
-
-" ------------------------------
 " syntax color " {{{
 syntax enable
 " }}}

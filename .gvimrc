@@ -7,9 +7,10 @@ elseif has('gui_macvim')
   set columns=120
 endif
 set showtabline=2
-set guioptions-=T
+set guioptions-=e
 set guioptions-=m
 set guioptions-=r
+set guioptions-=T
 set guicursor=a:blinkon0
 set visualbell t_vb=
 colorscheme solarized
@@ -31,6 +32,22 @@ if has('printer')
     set printfont=MeiryoKe_Gothic:h10
   endif
 endif
+" }}}
+
+" ------------------------------
+" tabline " {{{
+"set tabline=%!MakeTabLine()
+"
+"function! s:tabpage_label(n)
+"endfunction
+"
+"function! MakeTabLine()
+"    let titles = map(range(1, tabpagenr('$')), 's:tabpage_label(v:val)')
+"    let sep = ' | '
+"    let tabpages = join(titles, sep) . sep . '%#TabLineFill#%T'
+"    let info = ''
+"    return tabpages . '%=' . info
+"endfunction
 " }}}
 
 " vim: foldmethod=marker
