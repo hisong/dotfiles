@@ -10,52 +10,52 @@ endfor
 
 " ------------------------------
 " Vundle " {{{
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 " }}}
 
 " ------------------------------
 " NeoBundle " {{{
-"if has('vim_starting')
-"    set runtimepath+=~/.vim/bundle/neobundle.vim/
-"    call neobundle#rc(expand('~/.vim/bundle/'))
-"endif
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    call neobundle#rc(expand('~/.vim/bundle/'))
+endif
 " }}}
 
 " ------------------------------
 " plugins " {{{
-Bundle 'gmarik/vundle'
-"NeoBundle 'Shougo/neobundle.vim'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimshell'
-Bundle 'Shougo/vimfiler'
-Bundle 'Shougo/vimproc'
-Bundle 'thinca/vim-quickrun'
-Bundle 'tsaleh/vim-align'
-Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-markdown'
-"Bundle 'tyru/savemap.vim'
-"Bundle 'tyru/vice.vim'
-"Bundle 'tyru/eskk.vim'
-Bundle 'tyru/open-browser.vim'
-Bundle 'fuenor/qfixhowm'
-Bundle 'mattn/webapi-vim'
-"Bundle 'mattn/vimplenote-vim'
-Bundle 'mattn/learn-vimscript'
-"Bundle 'ujihisa/unite-colorscheme'
-"Bundle 'ujihisa/unite-font'
-"Bundle 'tsukkee/lingr-vim'
-"Bundle 'motemen/hatena-vim'
-Bundle 'sudo.vim'
-Bundle 'mru.vim'
-Bundle 'TwitVim'
-Bundle 'koron/chalice'
-Bundle 'altercation/vim-colors-solarized'
-"Bundle 'tomasr/molokai'
-"Bundle 'fugalh/desert.vim'
-"Bundle 'hallison/vim-darkdevel'
-"Bundle 'Zenburn'
+"Bundle 'gmarik/vundle'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tsaleh/vim-align'
+NeoBundle 'tpope/vim-surround'
+"NeoBundle 'tpope/vim-markdown'
+"NeoBundle 'tyru/savemap.vim'
+"NeoBundle 'tyru/vice.vim'
+"NeoBundle 'tyru/eskk.vim'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'fuenor/qfixhowm'
+NeoBundle 'mattn/webapi-vim'
+"NeoBundle 'mattn/vimplenote-vim'
+NeoBundle 'mattn/learn-vimscript'
+"NeoBundle 'ujihisa/unite-colorscheme'
+"NeoBundle 'ujihisa/unite-font'
+"NeoBundle 'tsukkee/lingr-vim'
+"NeoBundle 'motemen/hatena-vim'
+NeoBundle 'sudo.vim'
+NeoBundle 'mru.vim'
+NeoBundle 'TwitVim'
+NeoBundle 'koron/chalice'
+NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'tomasr/molokai'
+"NeoBundle 'fugalh/desert.vim'
+"NeoBundle 'hallison/vim-darkdevel'
+"NeoBundle 'Zenburn'
 
 filetype plugin indent on
 " }}}
