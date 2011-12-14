@@ -253,4 +253,6 @@ noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
 " }}}
 
+set secure
+
 " vim: foldmethod=marker
