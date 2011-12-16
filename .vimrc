@@ -1,18 +1,5 @@
 set nocompatible
-filetype off
-
-" ------------------------------
-" runtimepath " {{{
-for path in split(glob($VIM.'/plugins/*'), '\n')
-    if isdirectory(path) | let &runtimepath = &runtimepath.','.path | end
-endfor
-" }}}
-
-" ------------------------------
-" Vundle " {{{
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-" }}}
+filetype plugin indent off
 
 " ------------------------------
 " NeoBundle " {{{
@@ -24,7 +11,6 @@ endif
 
 " ------------------------------
 " plugins " {{{
-"Bundle 'gmarik/vundle'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
@@ -49,7 +35,7 @@ NeoBundle 'mattn/learn-vimscript'
 "NeoBundle 'tsukkee/lingr-vim'
 "NeoBundle 'motemen/hatena-vim'
 NeoBundle 'sudo.vim'
-NeoBundle 'mru.vim'
+"NeoBundle 'mru.vim'
 NeoBundle 'TwitVim'
 NeoBundle 'koron/chalice'
 NeoBundle 'altercation/vim-colors-solarized'
