@@ -30,6 +30,7 @@ NeoBundle 'fuenor/qfixhowm'
 NeoBundle 'mattn/webapi-vim'
 "NeoBundle 'mattn/vimplenote-vim'
 NeoBundle 'mattn/learn-vimscript'
+NeoBundle 'mattn/googlesuggest-complete-vim'
 "NeoBundle 'ujihisa/unite-colorscheme'
 "NeoBundle 'ujihisa/unite-font'
 "NeoBundle 'tsukkee/lingr-vim'
@@ -60,6 +61,7 @@ inoremap <expr><C-e> pumvisible() ? neocomplcache#cancel_popup() : "\<C-e>"
 
 " unite.vim " {{{
 let g:unite_enable_start_insert = 1
+let g:unite_source_history_yank_enable = 1
 " }}}
 
 " vimfiler " {{{
@@ -74,6 +76,10 @@ if has('vim_starting')
 endif
 " }}}
 
+" googlesuggest-complete " {{{
+"set completefunc=googlesuggest#Complete
+" }}}
+
 " quickrun " {{{
 let g:quickrun_config = {}
 let g:quickrun_config['markdown'] = {
@@ -83,8 +89,8 @@ let g:quickrun_config['markdown'] = {
 " }}}
 
 " TwitVim " {{{
-let twitvim_api_root = "https://api.twitter.com/1"
-let twitvim_count = 100
+let g:twitvim_api_root = "https://api.twitter.com/1"
+let g:twitvim_count = 100
 " }}}
 " }}}
 
@@ -223,17 +229,17 @@ let mapleader = ";"
 inoremap <C-s> <Esc>:w<CR>
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
 vnoremap <silent> v $h
-nnoremap <silent> <Esc><Esc> :noh<CR><Esc>
-nnoremap bb :ls<CR>:buf 
-nnoremap <silent> ,s :w<CR>:bd<CR>
-nnoremap <silent> ,x :bd!<CR>
-nnoremap <silent> ,m :MRU<CR>
-nnoremap <silent> ,u :Unite buffer file_mru file<CR>
-nnoremap <silent> ,tf :FriendsTwitter<CR>
-nnoremap ,tl :ListTwitter 
-nnoremap <silent> ,tn :NextTwitter<CR>
-nnoremap <silent> ,tp :PosttoTwitter<CR>
-noremap <C-s> :w<CR>
+nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
+nnoremap bb :<C-u>ls<CR>:buf 
+nnoremap <silent> ,s :<C-u>w<CR>:bd<CR>
+nnoremap <silent> ,x :<C-u>bd!<CR>
+nnoremap <silent> ,m :<C-u>MRU<CR>
+nnoremap <silent> ,u :<C-u>Unite buffer file_mru file history/yank<CR>
+nnoremap <silent> ,tf :<C-u>FriendsTwitter<CR>
+nnoremap ,tl :<C-u>ListTwitter 
+nnoremap <silent> ,tn :<C-u>NextTwitter<CR>
+nnoremap <silent> ,tp :<C-u>PosttoTwitter<CR>
+noremap <C-s> :<C-u>w<CR>
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
