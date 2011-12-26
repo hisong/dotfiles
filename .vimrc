@@ -141,6 +141,12 @@ set clipboard=unnamed
 " }}}
 
 " ------------------------------
+" fold " {{{
+set foldmethod=marker
+set commentstring=\"%s
+" }}}
+
+" ------------------------------
 " list " {{{
 set list
 set listchars=eol:~,tab:>-,trail:-,nbsp:%,extends:>,precedes:<
@@ -233,10 +239,9 @@ nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
 nnoremap bb :<C-u>ls<CR>:buf 
-nnoremap <silent> ,s :<C-u>w<CR>:bd<CR>
+nnoremap <silent> ,s :<C-u>VimShell<CR>
 nnoremap <silent> ,x :<C-u>bd!<CR>
 nnoremap <silent> ,u :<C-u>Unite buffer file_mru file history/yank<CR>
-nnoremap <silent> ,v :<C-u>VimShell<CR>
 nnoremap <silent> ,tf :<C-u>FriendsTwitter<CR>
 nnoremap ,tl :<C-u>ListTwitter 
 nnoremap <silent> ,tn :<C-u>NextTwitter<CR>
