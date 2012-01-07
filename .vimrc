@@ -11,40 +11,40 @@ endif
 
 " ------------------------------
 " plugins " {{{
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tpope/vim-surround'
-"NeoBundle 'tpope/vim-markdown'
-"NeoBundle 'tyru/savemap.vim'
-"NeoBundle 'tyru/vice.vim'
-"NeoBundle 'tyru/eskk.vim'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'tyru/restart.vim'
-NeoBundle 'fuenor/qfixhowm'
-NeoBundle 'mattn/webapi-vim'
-"NeoBundle 'mattn/vimplenote-vim'
-NeoBundle 'mattn/learn-vimscript'
-NeoBundle 'mattn/googlesuggest-complete-vim'
-"NeoBundle 'ujihisa/unite-colorscheme'
-"NeoBundle 'ujihisa/unite-font'
-NeoBundle 'h1mesuke/vim-alignta'
-"NeoBundle 'tsukkee/lingr-vim'
-"NeoBundle 'motemen/hatena-vim'
-NeoBundle 'sudo.vim'
-"NeoBundle 'mru.vim'
-NeoBundle 'TwitVim'
-NeoBundle 'koron/chalice'
-NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'tomasr/molokai'
-"NeoBundle 'fugalh/desert.vim'
-"NeoBundle 'hallison/vim-darkdevel'
-"NeoBundle 'Zenburn'
-NeoBundle 'osyo-manga/unite-banban2'
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
+NeoBundle 'git://github.com/Shougo/vimproc.git'
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
+NeoBundle 'git://github.com/tpope/vim-surround.git'
+"NeoBundle 'git://github.com/tpope/vim-markdown.git'
+"NeoBundle 'git://github.com/tyru/savemap.vim.git'
+"NeoBundle 'git://github.com/tyru/vice.vim.git'
+"NeoBundle 'git://github.com/tyru/eskk.vim.git'
+NeoBundle 'git://github.com/tyru/open-browser.vim.git'
+NeoBundle 'git://github.com/tyru/restart.vim.git'
+NeoBundle 'git://github.com/fuenor/qfixhowm.git'
+NeoBundle 'git://github.com/mattn/webapi-vim.git'
+"NeoBundle 'git://github.com/mattn/vimplenote-vim.git'
+NeoBundle 'git://github.com/mattn/learn-vimscript.git'
+NeoBundle 'git://github.com/mattn/googlesuggest-complete-vim.git'
+"NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
+"NeoBundle 'git://github.com/ujihisa/unite-font.git'
+NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
+"NeoBundle 'git://github.com/tsukkee/lingr-vim.git'
+"NeoBundle 'git://github.com/motemen/hatena-vim.git'
+NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
+"NeoBundle 'git://github.com/vim-scripts/mru.vim.git'
+NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
+NeoBundle 'git://github.com/koron/chalice.git'
+NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
+"NeoBundle 'git://github.com/tomasr/molokai.git'
+"NeoBundle 'git://github.com/fugalh/desert.vim.git'
+"NeoBundle 'git://github.com/hallison/vim-darkdevel.git'
+"NeoBundle 'git://github.com/vim-scripts/Zenburn.git'
+NeoBundle 'git://github.com/osyo-manga/unite-banban2.git'
 
 filetype plugin indent on
 " }}}
@@ -78,7 +78,7 @@ endif
 " }}}
 
 " googlesuggest-complete " {{{
-"set completefunc=googlesuggest#Complete
+set omnifunc=googlesuggest#Complete
 " }}}
 
 " quickrun " {{{
@@ -233,7 +233,6 @@ endif
 " ------------------------------
 " keymap " {{{
 let mapleader = ";"
-inoremap <C-s> <Esc>:w<CR>
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
@@ -248,7 +247,6 @@ nnoremap <silent> ,tf :<C-u>FriendsTwitter<CR>
 nnoremap ,tl :<C-u>ListTwitter 
 nnoremap <silent> ,tn :<C-u>NextTwitter<CR>
 nnoremap <silent> ,tp :<C-u>PosttoTwitter<CR>
-noremap <C-s> :<C-u>w<CR>
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
