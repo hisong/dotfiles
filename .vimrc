@@ -24,8 +24,7 @@ NeoBundle 'git://github.com/tpope/vim-surround.git'
 "NeoBundle 'git://github.com/tyru/vice.vim.git'
 "NeoBundle 'git://github.com/tyru/eskk.vim.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
-NeoBundle 'git://github.com/tyru/restart.vim.git'
-NeoBundle 'git://github.com/fuenor/qfixhowm.git'
+"NeoBundle 'git://github.com/fuenor/qfixhowm.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 "NeoBundle 'git://github.com/mattn/vimplenote-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
@@ -44,7 +43,6 @@ NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
 "NeoBundle 'git://github.com/fugalh/desert.vim.git'
 "NeoBundle 'git://github.com/hallison/vim-darkdevel.git'
 "NeoBundle 'git://github.com/vim-scripts/Zenburn.git'
-NeoBundle 'git://github.com/osyo-manga/unite-banban2.git'
 
 filetype plugin indent on
 " }}}
