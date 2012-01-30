@@ -237,7 +237,7 @@ nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
 nnoremap bb :<C-u>ls<CR>:buf 
-nnoremap <silent> ,a ggyG
+nnoremap <silent> ,a ggyG:bd!<CR>
 nnoremap <silent> ,s :<C-u>VimShell<CR>
 nnoremap <silent> ,x :<C-u>bd!<CR>
 nnoremap <silent> ,u :<C-u>Unite buffer file_mru file history/yank<CR>
