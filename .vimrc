@@ -29,7 +29,7 @@ NeoBundle 'git://github.com/mattn/webapi-vim.git'
 "NeoBundle 'git://github.com/mattn/vimplenote-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
 NeoBundle 'git://github.com/mattn/googlesuggest-complete-vim.git'
-"NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
+NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
 "NeoBundle 'git://github.com/ujihisa/unite-font.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
@@ -40,10 +40,10 @@ NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
 NeoBundle 'git://github.com/koron/chalice.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
-"NeoBundle 'git://github.com/tomasr/molokai.git'
-"NeoBundle 'git://github.com/fugalh/desert.vim.git'
-"NeoBundle 'git://github.com/hallison/vim-darkdevel.git'
-"NeoBundle 'git://github.com/vim-scripts/Zenburn.git'
+NeoBundle 'git://github.com/tomasr/molokai.git'
+NeoBundle 'git://github.com/fugalh/desert.vim.git'
+NeoBundle 'git://github.com/hallison/vim-darkdevel.git'
+NeoBundle 'git://github.com/vim-scripts/Zenburn.git'
 
 filetype plugin indent on
 " }}}
@@ -165,7 +165,7 @@ set shiftwidth=4
 set backup
 set backupdir=~/vimbackup
 set browsedir=current
-set swapfile
+set noswapfile
 set directory=~/vimbackup
 " }}}
 
