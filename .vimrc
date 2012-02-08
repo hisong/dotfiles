@@ -19,31 +19,16 @@ NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
-"NeoBundle 'git://github.com/tpope/vim-markdown.git'
-"NeoBundle 'git://github.com/tyru/savemap.vim.git'
-"NeoBundle 'git://github.com/tyru/vice.vim.git'
-"NeoBundle 'git://github.com/tyru/eskk.vim.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
-"NeoBundle 'git://github.com/fuenor/qfixhowm.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
-"NeoBundle 'git://github.com/mattn/vimplenote-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
 NeoBundle 'git://github.com/mattn/googlesuggest-complete-vim.git'
-NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
-"NeoBundle 'git://github.com/ujihisa/unite-font.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
-"NeoBundle 'git://github.com/tsukkee/lingr-vim.git'
-"NeoBundle 'git://github.com/motemen/hatena-vim.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
-"NeoBundle 'git://github.com/vim-scripts/mru.vim.git'
 NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
 NeoBundle 'git://github.com/koron/chalice.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'git://github.com/tomasr/molokai.git'
-NeoBundle 'git://github.com/fugalh/desert.vim.git'
-NeoBundle 'git://github.com/hallison/vim-darkdevel.git'
-NeoBundle 'git://github.com/vim-scripts/Zenburn.git'
 
 filetype plugin indent on
 " }}}
@@ -66,14 +51,6 @@ let g:unite_source_history_yank_enable = 1
 
 " vimfiler " {{{
 let g:vimfiler_as_default_explorer = 1
-" }}}
-
-" SKK settings " {{{
-if has('vim_starting')
-    let g:eskk#directory = "~/.eskk"
-    let g:eskk#dictionary = { 'path': "~/.skk-jisyo", 'sorted': 0, 'encoding': 'utf-8', }
-    let g:eskk#large_dictionary = { 'path': "~/.eskk/SKK-JISYO.L", 'sorted': 1, 'encoding': 'euc-jp', }
-endif
 " }}}
 
 " googlesuggest-complete " {{{
