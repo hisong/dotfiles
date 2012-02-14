@@ -208,21 +208,21 @@ endif
 
 " ------------------------------
 " keymap " {{{
-let mapleader = ";"
+let mapleader = "m"
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
 nnoremap bb :<C-u>ls<CR>:buf 
-nnoremap <silent> ,a ggyG:bd!<CR>
-nnoremap <silent> ,s :<C-u>VimShell<CR>
-nnoremap <silent> ,x :<C-u>bd!<CR>
-nnoremap <silent> ,u :<C-u>Unite buffer file_mru file history/yank<CR>
-nnoremap <silent> ,tf :<C-u>FriendsTwitter<CR>
-nnoremap ,tl :<C-u>ListTwitter 
-nnoremap <silent> ,tn :<C-u>NextTwitter<CR>
-nnoremap <silent> ,tp :<C-u>PosttoTwitter<CR>
+nnoremap <silent> <Leader>a ggyG:bd!<CR>
+nnoremap <silent> <Leader>s :<C-u>VimShell<CR>
+nnoremap <silent> <Leader>x :<C-u>bd!<CR>
+nnoremap <silent> <Leader>u :<C-u>Unite buffer file_mru file history/yank<CR>
+nnoremap <silent> <Leader>tf :<C-u>FriendsTwitter<CR>
+nnoremap <Leader>tl :<C-u>ListTwitter 
+nnoremap <silent> <Leader>tn :<C-u>NextTwitter<CR>
+nnoremap <silent> <Leader>tp :<C-u>PosttoTwitter<CR>
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
