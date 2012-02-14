@@ -25,6 +25,7 @@ set guioptions-=T
 set guicursor=a:blinkon0
 set visualbell t_vb=
 colorscheme solarized
+"colorscheme badwolf
 " }}}
 
 " ------------------------------

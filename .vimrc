@@ -30,6 +30,7 @@ NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
 NeoBundle 'git://github.com/koron/chalice.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
+NeoBundle 'git://github.com/sjl/badwolf.git'
 
 filetype plugin indent on
 " }}}
