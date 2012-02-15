@@ -38,6 +38,10 @@ filetype plugin indent on
 
 " ------------------------------
 " plugins settings " {{{
+" Kaoriya " {{{
+let g:plugin_verifyenc_disable = 1
+" }}}
+
 " neocomplcache " {{{
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_underbar_completion = 1
