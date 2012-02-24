@@ -21,7 +21,7 @@ NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
-NeoBundle 'git://github.com/tpope/vim-markdown.git'
+NeoBundle 'git://github.com/hallison/vim-markdown.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
@@ -69,6 +69,7 @@ set omnifunc=googlesuggest#Complete
 let g:quickrun_config = {}
 let g:quickrun_config['markdown'] = {
     \ 'type': 'markdown/pandoc',
+    \ 'cmdopt': '-s',
     \ 'outputter': 'browser'
     \ }
 " }}}
@@ -218,6 +219,10 @@ endif
 " keymap " {{{
 let mapleader = "m"
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
+inoremap <silent> <C-a> <C-o><S-i>
+inoremap <silent> <C-e> <C-o><S-a>
+inoremap <silent> <C-f> <Right>
+inoremap <silent> <C-b> <Left>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
