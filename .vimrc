@@ -219,8 +219,8 @@ endif
 " keymap " {{{
 let mapleader = "m"
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
-inoremap <silent> <C-a> <C-o><S-i>
-inoremap <silent> <C-e> <C-o><S-a>
+inoremap <silent> <C-a> <Home>
+inoremap <silent> <C-e> <End>
 inoremap <silent> <C-f> <Right>
 inoremap <silent> <C-b> <Left>
 vnoremap <silent> v $h
