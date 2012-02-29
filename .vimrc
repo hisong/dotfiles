@@ -92,6 +92,7 @@ set showcmd
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set hidden
 set shortmess+=I
+set term=xterm
 " }}}
 
 " ------------------------------
@@ -229,6 +230,7 @@ nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
 nnoremap bb :<C-u>ls<CR>:buf 
 nnoremap <silent> <Leader>a ggyG:bd!<CR>
+nnoremap <silent> <Leader>b :Unite buffer<CR>
 nnoremap <silent> <Leader>s :<C-u>VimShell<CR>
 nnoremap <silent> <Leader>x :<C-u>bd!<CR>
 nnoremap <silent> <Leader>u :<C-u>Unite buffer file_mru file history/yank<CR>
