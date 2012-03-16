@@ -24,9 +24,9 @@ NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/hallison/vim-markdown.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
+NeoBundle 'git://github.com/mattn/gist-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
 NeoBundle 'git://github.com/mattn/vdbi-vim.git'
-NeoBundle 'git://github.com/mattn/googlesuggest-complete-vim.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
@@ -61,10 +61,6 @@ let g:unite_source_history_yank_enable = 1
 
 " vimfiler " {{{
 let g:vimfiler_as_default_explorer = 1
-" }}}
-
-" googlesuggest-complete " {{{
-set omnifunc=googlesuggest#Complete
 " }}}
 
 " quickrun " {{{
