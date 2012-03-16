@@ -72,6 +72,12 @@ let g:quickrun_config['markdown'] = {
     \ }
 " }}}
 
+" gist " {{{
+let g:gist_detect_filetype = 1
+let g:gist_show_privates = 1
+let g:gist_private = 1
+" }}}
+
 " TwitVim " {{{
 let g:twitvim_api_root = "https://api.twitter.com/1"
 let g:twitvim_count = 100
