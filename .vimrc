@@ -75,7 +75,7 @@ let g:quickrun_config['markdown'] = {
 " gist " {{{
 let g:gist_detect_filetype = 1
 let g:gist_show_privates = 1
-let g:gist_private = 1
+let g:gist_put_url_to_clipboard_after_post = 1
 " }}}
 
 " TwitVim " {{{
@@ -228,6 +228,8 @@ inoremap <silent> <C-a> <Home>
 inoremap <silent> <C-e> <End>
 inoremap <silent> <C-f> <Right>
 inoremap <silent> <C-b> <Left>
+inoremap <silent> <C-h> <BS>
+inoremap <silent> <C-d> <Del>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
