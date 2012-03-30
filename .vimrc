@@ -13,10 +13,7 @@ endif
 " ------------------------------
 " plugins " {{{
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/Shougo/vimshell.git'
-NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
@@ -28,9 +25,7 @@ NeoBundle 'git://github.com/mattn/gist-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
 NeoBundle 'git://github.com/mattn/vdbi-vim.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
-NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
-NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
 NeoBundle 'git://github.com/koron/chalice.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
 NeoBundle 'git://github.com/sjl/badwolf.git'
@@ -45,22 +40,9 @@ filetype plugin indent on
 let g:plugin_verifyenc_disable = 1
 " }}}
 
-" neocomplcache " {{{
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_auto_completion_start_length = 2
-let g:neocomplcache_max_list = 100
-inoremap <expr><C-y> pumvisible() ? neocomplcache#close_popup() : "\<C-y>"
-inoremap <expr><C-e> pumvisible() ? neocomplcache#cancel_popup() : "\<C-e>"
-" }}}
-
 " unite.vim " {{{
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
-" }}}
-
-" vimfiler " {{{
-let g:vimfiler_as_default_explorer = 1
 " }}}
 
 " quickrun " {{{
@@ -76,11 +58,6 @@ let g:quickrun_config['markdown'] = {
 let g:gist_detect_filetype = 1
 let g:gist_show_privates = 1
 let g:gist_put_url_to_clipboard_after_post = 1
-" }}}
-
-" TwitVim " {{{
-let g:twitvim_api_root = "https://api.twitter.com/1"
-let g:twitvim_count = 100
 " }}}
 " }}}
 
@@ -237,13 +214,8 @@ nnoremap <silent> <S-Space> kzz
 nnoremap bb :<C-u>ls<CR>:buf 
 nnoremap <silent> <Leader>a ggyG:bd!<CR>
 nnoremap <silent> <Leader>b :Unite buffer<CR>
-nnoremap <silent> <Leader>s :<C-u>VimShell<CR>
 nnoremap <silent> <Leader>x :<C-u>bd!<CR>
 nnoremap <silent> <Leader>u :<C-u>Unite buffer file_mru file history/yank<CR>
-nnoremap <silent> <Leader>tf :<C-u>FriendsTwitter<CR>
-nnoremap <Leader>tl :<C-u>ListTwitter 
-nnoremap <silent> <Leader>tn :<C-u>NextTwitter<CR>
-nnoremap <silent> <Leader>tp :<C-u>PosttoTwitter<CR>
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
