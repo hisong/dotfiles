@@ -15,7 +15,6 @@ endif
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
-NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/hallison/vim-markdown.git'
@@ -23,13 +22,9 @@ NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
-NeoBundle 'git://github.com/mattn/vdbi-vim.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
-NeoBundle 'git://github.com/koron/chalice.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'git://github.com/sjl/badwolf.git'
-NeoBundle 'git://github.com/veloce/vim-aldmeris.git'
 
 filetype plugin indent on
 " }}}
@@ -203,8 +198,10 @@ let mapleader = "m"
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
 inoremap <silent> <C-a> <Home>
 inoremap <silent> <C-e> <End>
-inoremap <silent> <C-f> <Right>
+inoremap <silent> <C-p> <Up>
+inoremap <silent> <C-n> <Down>
 inoremap <silent> <C-b> <Left>
+inoremap <silent> <C-f> <Right>
 inoremap <silent> <C-h> <BS>
 inoremap <silent> <C-d> <Del>
 vnoremap <silent> v $h
