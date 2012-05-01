@@ -38,6 +38,8 @@ let g:plugin_verifyenc_disable = 1
 " unite.vim " {{{
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
+let g:unite_source_file_mru_limit = 50
+let g:unite_source_file_mru_filename_format = ''
 " }}}
 
 " quickrun " {{{
@@ -212,11 +214,21 @@ nnoremap bb :<C-u>ls<CR>:buf
 nnoremap <silent> <Leader>a ggyG:bd!<CR>
 nnoremap <silent> <Leader>b :Unite buffer<CR>
 nnoremap <silent> <Leader>x :<C-u>bd!<CR>
-nnoremap <silent> <Leader>u :<C-u>Unite buffer file_mru file history/yank<CR>
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
+
+" Unite keymap " {{{
+nnoremap [unite] <Nop>
+nmap <Leader>u [unite]
+nnoremap <silent> [unite]a :<C-u>Unite buffer file_mru file history/yank<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+" }}}
 " }}}
 
 set secure
