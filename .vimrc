@@ -23,6 +23,8 @@ NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
+NeoBundle 'git://github.com/pangloss/vim-javascript.git'
+NeoBundle 'git://github.com/vim-scripts/JavaScript-syntax.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
 
