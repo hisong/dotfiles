@@ -21,8 +21,11 @@ NeoBundle 'git://github.com/hallison/vim-markdown.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/mattn/learn-vimscript.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
+NeoBundle 'git://github.com/othree/html5.vim.git'
+NeoBundle 'git://github.com/hail2u/vim-css3-syntax.git'
 NeoBundle 'git://github.com/pangloss/vim-javascript.git'
 NeoBundle 'git://github.com/vim-scripts/JavaScript-syntax.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
@@ -208,6 +211,12 @@ inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
 inoremap <silent> <C-h> <BS>
 inoremap <silent> <C-d> <Del>
+inoremap {} {}<Left>
+inoremap [] []<Left>
+inoremap () ()<Left>
+inoremap <> <><Left>
+inoremap "" ""<Left>
+inoremap '' ''<Left>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
