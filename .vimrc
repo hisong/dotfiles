@@ -244,4 +244,4 @@ nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 
 set secure
 
-" vim: foldmethod=marker
+" vim: foldmethod=marker:
