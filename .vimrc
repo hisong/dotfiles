@@ -211,12 +211,12 @@ inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
 inoremap <silent> <C-h> <BS>
 inoremap <silent> <C-d> <Del>
-inoremap {} {}<Left>
-inoremap [] []<Left>
-inoremap () ()<Left>
-inoremap <> <><Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
+"inoremap {} {}<Left>
+"inoremap [] []<Left>
+"inoremap () ()<Left>
+"inoremap <> <><Left>
+"inoremap "" ""<Left>
+"inoremap '' ''<Left>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
