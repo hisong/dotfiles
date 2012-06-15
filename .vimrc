@@ -240,6 +240,15 @@ nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 " }}}
 " }}}
 
+" ------------------------------
+" auGroup " {{{
+augroup highlightIdegraphicSpace
+    autocmd!
+    autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=LightBlue guibg=LightBlue
+    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
+" }}}
+
 set secure
 
 " vim: foldmethod=marker:

@@ -1,15 +1,6 @@
 scriptencoding utf-8
 
 " ------------------------------
-" auGroup " {{{
-augroup highlightIdegraphicSpace
-    autocmd!
-    autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=LightBlue guibg=LightBlue
-    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
-augroup END
-" }}}
-
-" ------------------------------
 " display " {{{
 set lines=40
 if has('win32')
@@ -25,8 +16,6 @@ set guioptions-=T
 set guicursor=a:blinkon0
 set visualbell t_vb=
 colorscheme solarized
-"colorscheme badwolf
-"colorscheme aldmeris
 " }}}
 
 " ------------------------------
