@@ -45,14 +45,14 @@ let g:unite_source_file_mru_limit = 50
 let g:unite_source_file_mru_filename_format = ''
 " }}}
 
-" quickrun " {{{
-let g:quickrun_config = {}
-let g:quickrun_config['markdown'] = {
-    \ 'type': 'markdown/pandoc',
-    \ 'cmdopt': '-s',
-    \ 'outputter': 'browser'
-    \ }
-" }}}
+"" quickrun " {{{
+"let g:quickrun_config = {}
+"let g:quickrun_config['markdown'] = {
+"    \ 'type': 'markdown/pandoc',
+"    \ 'cmdopt': '-s',
+"    \ 'outputter': 'browser'
+"    \ }
+"" }}}
 
 " gist " {{{
 let g:gist_detect_filetype = 1
