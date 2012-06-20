@@ -26,6 +26,7 @@ NeoBundle 'git://github.com/othree/html5.vim.git'
 NeoBundle 'git://github.com/hail2u/vim-css3-syntax.git'
 NeoBundle 'git://github.com/pangloss/vim-javascript.git'
 NeoBundle 'git://github.com/nono/jquery.vim.git'
+NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
 
@@ -77,8 +78,15 @@ set term=xterm
 " }}}
 
 " ------------------------------
-" syntax color " {{{
+" syntax " {{{
 syntax enable
+
+" php settings " {{{
+let php_sql_query = 1
+let php_htmlInStrings = 1
+let php_noShortTags = 1
+let php_folding = 1
+" }}}
 " }}}
 
 " ------------------------------
@@ -209,17 +217,10 @@ inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
 inoremap <silent> <C-h> <BS>
 inoremap <silent> <C-d> <Del>
-"inoremap {} {}<Left>
-"inoremap [] []<Left>
-"inoremap () ()<Left>
-"inoremap <> <><Left>
-"inoremap "" ""<Left>
-"inoremap '' ''<Left>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
-nnoremap bb :<C-u>ls<CR>:buf 
 nnoremap <silent> <Leader>a ggyG:bd!<CR>
 nnoremap <silent> <Leader>b :Unite buffer<CR>
 nnoremap <silent> <Leader>x :<C-u>bd!<CR>
