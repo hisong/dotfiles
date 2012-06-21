@@ -130,10 +130,21 @@ set listchars=eol:~,tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 
 " ------------------------------
 " tab " {{{
-set tabstop=4
 set expandtab
 set smarttab
 set shiftwidth=4
+set softtabstop=4
+
+" MyTabSettings " {{{
+if has('autocmd')
+    augroup MyTabSettings
+        autocmd!
+    augroup END
+
+    autocmd MyTabSettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2
+    autocmd MyTabSettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl softtabstop=2
+endif
+" }}}
 " }}}
 
 " ------------------------------
