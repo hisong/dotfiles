@@ -134,17 +134,6 @@ set expandtab
 set smarttab
 set shiftwidth=4
 set softtabstop=4
-
-" MyTabSettings " {{{
-if has('autocmd')
-    augroup MyTabSettings
-        autocmd!
-    augroup END
-
-    autocmd MyTabSettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2
-    autocmd MyTabSettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl softtabstop=2
-endif
-" }}}
 " }}}
 
 " ------------------------------
@@ -250,6 +239,19 @@ nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 " }}}
+" }}}
+
+" ------------------------------
+" autocmd " {{{
+if has('autocmd')
+    augroup MySettings
+        autocmd!
+    augroup END
+
+    autocmd FileType * setl formatoptions-=ro
+    autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2
+    autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl softtabstop=2
+endif
 " }}}
 
 set secure
