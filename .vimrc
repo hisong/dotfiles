@@ -224,7 +224,7 @@ nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
 nnoremap <silent> <Leader>a ggyG:bd!<CR>
 nnoremap <silent> <Leader>b :Unite buffer<CR>
-nnoremap <silent> <Leader>s :vimshell<CR>
+nnoremap <silent> <Leader>s :VimShell<CR>
 nnoremap <silent> <Leader>x :<C-u>bd!<CR>
 noremap <silent> j gj
 noremap <silent> k gk
