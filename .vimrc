@@ -14,7 +14,6 @@ endif
 " plugins " {{{
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/Shougo/vimshell.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/hallison/vim-markdown.git'
@@ -224,7 +223,6 @@ nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
 nnoremap <silent> <Leader>a ggyG:bd!<CR>
 nnoremap <silent> <Leader>b :Unite buffer<CR>
-nnoremap <silent> <Leader>s :VimShell<CR>
 nnoremap <silent> <Leader>x :<C-u>bd!<CR>
 noremap <silent> j gj
 noremap <silent> k gk
