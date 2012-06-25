@@ -21,6 +21,8 @@ NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'git://github.com/kana/vim-operator-user.git'
+NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/othree/html5.vim.git'
 NeoBundle 'git://github.com/hail2u/vim-css3-syntax.git'
@@ -59,6 +61,10 @@ let g:unite_source_file_mru_filename_format = ''
 let g:gist_detect_filetype = 1
 let g:gist_show_privates = 1
 let g:gist_put_url_to_clipboard_after_post = 1
+" }}}
+
+" operator-replace " {{{
+map _ <Plug>(operator-replace)
 " }}}
 " }}}
 
