@@ -247,10 +247,10 @@ if has('autocmd')
     augroup MySettings
         autocmd!
     augroup END
-
-    autocmd FileType * setl formatoptions-=ro
     autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2
     autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl softtabstop=2
+
+    autocmd FileType * setl formatoptions-=ro
 endif
 " }}}
 
