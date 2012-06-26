@@ -11,12 +11,8 @@ augroup END
 
 " ------------------------------
 " display " {{{
-set lines=40
-if has('win32')
-  set columns=128
-elseif has('gui_macvim')
-  set columns=120
-endif
+set lines=50
+set columns=160
 set showtabline=2
 set guioptions-=e
 set guioptions-=m
