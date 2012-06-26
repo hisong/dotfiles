@@ -29,16 +29,8 @@ colorscheme solarized
 
 " ------------------------------
 " font " {{{
-if has('win32')
-  set guifont=MeiryoKe_Gothic:h10
-elseif has('xfontset')
-  set guifontset=a14,r14,k14
-endif
-if has('printer')
-  if has('win32')
-    set printfont=MeiryoKe_Gothic:h10
-  endif
-endif
+set guifont=Ricty:h14
+set printfont=Ricty:h14
 " }}}
 
 " ------------------------------
