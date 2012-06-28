@@ -1,15 +1,6 @@
 scriptencoding utf-8
 
 " ------------------------------
-" auGroup " {{{
-augroup highlightIdegraphicSpace
-    autocmd!
-    autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=LightBlue guibg=LightBlue
-    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
-augroup END
-" }}}
-
-" ------------------------------
 " display " {{{
 set lines=50
 set columns=160
