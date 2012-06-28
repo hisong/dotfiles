@@ -25,8 +25,12 @@ colorscheme solarized
 
 " ------------------------------
 " font " {{{
-set guifont=Ricty:h14
-set printfont=Ricty:h14
+if has('win32')
+    set guifont=Ricty:h10
+    set printfont=Ricty:h10
+else
+    set guifont=Ricty:h14
+endif
 " }}}
 
 " ------------------------------
