@@ -5,7 +5,7 @@ scriptencoding utf-8
 augroup highlightIdegraphicSpace
     autocmd!
     autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=LightBlue guibg=LightBlue
-    autocmd VimEnter,WinEnter * match IdeographicSpace /�@/
+    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
 " }}}
 
@@ -27,6 +27,7 @@ colorscheme solarized
 " font " {{{
 if has('win32')
     set guifont=Ricty:h10
+    " おそらくWindowsでしか印刷は使わない
     set printfont=Ricty:h10
 else
     set guifont=Ricty:h14
