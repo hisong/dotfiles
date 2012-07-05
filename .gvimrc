@@ -11,8 +11,8 @@ set guioptions-=r
 set guioptions-=T
 set guicursor=a:blinkon0
 set visualbell t_vb=
-"set background=light
-set background=dark
+set background=light
+"set background=dark
 colorscheme solarized
 " }}}
 
