@@ -31,6 +31,8 @@ NeoBundle 'git://github.com/pangloss/vim-javascript.git'
 NeoBundle 'git://github.com/nono/jquery.vim.git'
 NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
+NeoBundle 'git://github.com/vim-scripts/Wombat.git'
+NeoBundle 'git://github.com/tomasr/molokai.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
 
 filetype plugin indent on

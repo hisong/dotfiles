@@ -14,6 +14,10 @@ set visualbell t_vb=
 set background=light
 "set background=dark
 colorscheme solarized
+"colorscheme wombat
+if g:colors_name ==? 'wombat'
+    hi Visual gui=none guifg=khaki guibg=olivedrab
+endif
 " }}}
 
 " ------------------------------
