@@ -20,6 +20,7 @@ NeoBundle 'git://github.com/hallison/vim-markdown.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
+NeoBundle 'git://github.com/mattn/togetter-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
@@ -238,6 +239,7 @@ noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
+nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 
 " Unite keymap " {{{
 nnoremap [unite] <Nop>
