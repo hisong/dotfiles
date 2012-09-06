@@ -226,8 +226,8 @@ inoremap <silent> <C-p> <Up>
 inoremap <silent> <C-n> <Down>
 inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
-inoremap <silent> <C-h> <BS>
-inoremap <silent> <C-d> <Del>
+"inoremap <silent> <C-h> <BS>
+"inoremap <silent> <C-d> <Del>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
