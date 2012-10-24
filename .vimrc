@@ -244,7 +244,7 @@ nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 " }}}
 
 " NERD Tree keymap " {{{
-nmap <Leader>n :NERDTreeToggle<CR>
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
 " }}}
 " }}}
 
