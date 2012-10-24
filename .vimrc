@@ -16,25 +16,20 @@ NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
-NeoBundle 'git://github.com/hallison/vim-markdown.git'
+NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
-NeoBundle 'git://github.com/mattn/togetter-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
-NeoBundle 'git://github.com/motemen/git-vim.git'
-NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
 NeoBundle 'git://github.com/othree/html5.vim.git'
 NeoBundle 'git://github.com/hail2u/vim-css3-syntax.git'
 NeoBundle 'git://github.com/pangloss/vim-javascript.git'
 NeoBundle 'git://github.com/nono/jquery.vim.git'
 NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
-NeoBundle 'git://github.com/vim-scripts/Wombat.git'
-NeoBundle 'git://github.com/tomasr/molokai.git'
 NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
 
 filetype plugin indent on
@@ -226,8 +221,6 @@ inoremap <silent> <C-p> <Up>
 inoremap <silent> <C-n> <Down>
 inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
-"inoremap <silent> <C-h> <BS>
-"inoremap <silent> <C-d> <Del>
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
@@ -248,6 +241,10 @@ nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+" }}}
+
+" NERD Tree keymap " {{{
+nmap <Leader>n :NERDTreeToggle<CR>
 " }}}
 " }}}
 
