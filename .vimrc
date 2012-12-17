@@ -14,13 +14,21 @@ endif
 " plugins " {{{
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/Shougo/vimproc.git'
+NeoBundle 'git://github.com/Shougo/vimproc.git', {
+            \   'build' : {
+            \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
+            \       'cygwin'    : 'make -f make_cygwin.mak',
+            \       'mac'       : 'make -f make_mac.mak',
+            \       'unix'      : 'make -f make_unix.mak',
+            \   },
+            \ }
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'git://github.com/kana/vim-smartchr.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
@@ -247,6 +255,11 @@ nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 " NERD Tree keymap " {{{
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 " }}}
+
+" smartchr keymap " {{{
+inoremap <expr> = smartchr#loop('=', ' = ', ' == ')
+" }}}
+
 " }}}
 
 " ------------------------------
