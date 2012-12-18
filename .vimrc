@@ -32,6 +32,7 @@ NeoBundle 'git://github.com/kana/vim-smartchr.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/kana/vim-fakeclip.git'
+NeoBundle 'git://github.com/kmnk/vim-unite-giti.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
 NeoBundle 'git://github.com/othree/html5.vim.git'
@@ -275,6 +276,7 @@ if has('autocmd')
     augroup END
     autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2
     autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl softtabstop=2
+    autocmd MySettings BufNewFile,BUfRead *.html,*.php,*.js,*.css setl nowrap
 
     autocmd FileType * setl formatoptions-=ro
 endif
