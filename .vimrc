@@ -31,6 +31,7 @@ NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/kana/vim-smartchr.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
+NeoBundle 'git://github.com/kana/vim-fakeclip.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
 NeoBundle 'git://github.com/othree/html5.vim.git'
@@ -128,7 +129,7 @@ set autoindent
 set smartindent
 set showmatch
 set backspace=indent,eol,start
-set clipboard=unnamed
+set clipboard=unnamed,autoselect
 " }}}
 
 " ------------------------------
@@ -231,15 +232,19 @@ inoremap <silent> <C-n> <Down>
 inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
 vnoremap <silent> v $h
+vmap <silent> <Leader>y "*y
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
-nnoremap <silent> <Leader>a ggyG:bd!<CR>
+"nnoremap <silent> <Leader>a ggyG:bd!<CR>
+nnoremap <silent> <Leader>a ggVG
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
 nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
+nmap <silent> <Leader>p "*p
+nmap <silent> <Leader>P "*P
 
 " Unite keymap " {{{
 nnoremap [unite] <Nop>
@@ -257,7 +262,8 @@ nmap <silent> <Leader>n :NERDTreeToggle<CR>
 " }}}
 
 " smartchr keymap " {{{
-inoremap <expr> = smartchr#loop('=', ' = ', ' == ')
+inoremap <expr> = smartchr#loop('=', ' = ', ' == ', ' != ')
+inoremap <expr> , smartchr#loop(',', ', ', '","', '", "')
 " }}}
 
 " }}}
