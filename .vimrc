@@ -236,7 +236,6 @@ vmap <silent> <Leader>y "*y
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Space> jzz
 nnoremap <silent> <S-Space> kzz
-"nnoremap <silent> <Leader>a ggyG:bd!<CR>
 nnoremap <silent> <Leader>a ggVG
 noremap <silent> j gj
 noremap <silent> k gk
