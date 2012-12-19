@@ -1,6 +1,11 @@
 scriptencoding utf-8
 
 " ------------------------------
+" colorscheme " {{{
+NeoBundleSource vim-colors-solarized
+" }}}
+
+" ------------------------------
 " display " {{{
 set lines=50
 set columns=160
