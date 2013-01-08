@@ -92,6 +92,7 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 set hidden
 set shortmess+=I
 set term=xterm
+set t_Co=256
 " }}}
 
 " ------------------------------
