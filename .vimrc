@@ -32,6 +32,8 @@ NeoBundle 'git://github.com/kana/vim-smartchr.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/kana/vim-fakeclip.git'
+NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
+NeoBundle 'git://github.com/fuenor/qfixhowm.git'
 NeoBundle 'git://github.com/kmnk/vim-unite-giti.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
@@ -76,6 +78,20 @@ let g:gist_put_url_to_clipboard_after_post = 1
 
 " operator-replace " {{{
 map _ <Plug>(operator-replace)
+" }}}
+
+" vim-powerline " {{{
+"let g:Powerline_symbols = 'fancy'
+" }}}
+
+" qfixhowm " {{{
+let QFixHowm_Key = 'm'
+let howm_dir = '~/howm'
+let howm_filename = '%Y/%m/%Y-%m-%d-%H%M%S.mkd'
+let howm_fileencoding ='utf-8'
+let howm_fileformat = 'unix'
+let QFixHowm_FileType = 'markdown'
+let QFixHowm_Title = '#'
 " }}}
 " }}}
 
