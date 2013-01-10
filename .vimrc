@@ -22,6 +22,8 @@ NeoBundle 'git://github.com/Shougo/vimproc.git', {
             \       'unix'      : 'make -f make_unix.mak',
             \   },
             \ }
+NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
@@ -60,6 +62,10 @@ let g:unite_source_file_mru_limit = 50
 let g:unite_source_file_mru_filename_format = ''
 " }}}
 
+" vimfiler " {{{
+let g:vimfiler_as_default_explorer = 1
+" }}}
+
 "" quickrun " {{{
 "let g:quickrun_config = {}
 "let g:quickrun_config['markdown'] = {
@@ -86,6 +92,7 @@ map _ <Plug>(operator-replace)
 " memolist " {{{
 let g:memolist_memo_suffix = "md"
 let g:memolist_path = "~/Dropbox/Documents/memo"
+let g:memolist_vimfiler = 1
 " }}}
 " }}}
 
@@ -265,6 +272,10 @@ nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+" }}}
+
+" vimfiler keymap " {{{
+nnoremap <silent> <Leader>vf :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
 " }}}
 
 " NERD Tree keymap " {{{
