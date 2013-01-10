@@ -82,6 +82,11 @@ map _ <Plug>(operator-replace)
 " vim-powerline " {{{
 "let g:Powerline_symbols = 'fancy'
 " }}}
+
+" memolist " {{{
+let g:memolist_memo_suffix = "md"
+let g:memolist_path = "~/Dropbox/Documents/memo"
+" }}}
 " }}}
 
 " ------------------------------
