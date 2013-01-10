@@ -28,7 +28,6 @@ NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
-NeoBundle 'git://github.com/kana/vim-smartchr.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/kana/vim-fakeclip.git'
@@ -267,11 +266,14 @@ nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 " }}}
 
-" smartchr keymap " {{{
-inoremap <expr> = smartchr#loop('=', ' = ', ' == ', ' != ')
-inoremap <expr> , smartchr#loop(',', ', ', '","', '", "')
+" memolist keymap " {{{
+nnoremap [memolist] <Nop>
+nmap <Leader>m [memolist]
+nnoremap <silent> [memolist]n :<C-u>MemoNew<CR>
+nnoremap <silent> [memolist]l :<C-u>MemoList<CR>
+nnoremap <silent> [memolist]g :<C-u>MemoGrep<CR>
+nnoremap <silent> [memolist]u :<C-u>Unite file:<C-r>=g:memolist_path."/"<CR><CR>
 " }}}
-
 " }}}
 
 " ------------------------------
