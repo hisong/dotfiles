@@ -33,6 +33,7 @@ NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/kana/vim-fakeclip.git'
+NeoBundle 'git://github.com/kana/vim-submode.git'
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'git://github.com/glidenote/memolist.vim.git'
 NeoBundle 'git://github.com/kmnk/vim-unite-giti.git'
@@ -83,6 +84,17 @@ let g:gist_put_url_to_clipboard_after_post = 1
 
 " operator-replace " {{{
 map _ <Plug>(operator-replace)
+" }}}
+
+" submode " {{{
+call submode#enter_with('winsize', 'n', '', '<C-w>>', '<C-w>>')
+call submode#enter_with('winsize', 'n', '', '<C-w><', '<C-w><')
+call submode#enter_with('winsize', 'n', '', '<C-w>+', '<C-w>+')
+call submode#enter_with('winsize', 'n', '', '<C-w>-', '<C-w>-')
+call submode#map('winsize', 'n', '', '>', '<C-w>>')
+call submode#map('winsize', 'n', '', '<', '<C-w><')
+call submode#map('winsize', 'n', '', '+', '<C-w>+')
+call submode#map('winsize', 'n', '', '-', '<C-w>-')
 " }}}
 
 " vim-powerline " {{{
@@ -287,7 +299,7 @@ nnoremap [memolist] <Nop>
 nmap <Leader>m [memolist]
 nnoremap <silent> [memolist]n :<C-u>MemoNew<CR>
 nnoremap <silent> [memolist]l :<C-u>MemoList<CR>
-nnoremap <silent> [memolist]g :<C-u>MemoGrep<CR>
+nnoremap <silent> [memolist]g :<C-u>Unite grep:<C-r>=g:memolist_path."/"<CR><CR>
 nnoremap <silent> [memolist]u :<C-u>Unite file:<C-r>=g:memolist_path."/"<CR><CR>
 " }}}
 " }}}
