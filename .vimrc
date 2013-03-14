@@ -40,10 +40,8 @@ NeoBundle 'git://github.com/kmnk/vim-unite-giti.git'
 NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
 NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
 NeoBundle 'git://github.com/othree/html5.vim.git'
+NeoBundle 'git://github.com/othree/javascript-libraries-syntax.vim.git'
 NeoBundle 'git://github.com/hail2u/vim-css3-syntax.git'
-NeoBundle 'git://github.com/pangloss/vim-javascript.git'
-NeoBundle 'git://github.com/nono/jquery.vim.git'
-NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 NeoBundleLazy 'git://github.com/altercation/vim-colors-solarized.git'
 
@@ -67,14 +65,9 @@ let g:unite_source_file_mru_filename_format = ''
 let g:vimfiler_as_default_explorer = 1
 " }}}
 
-"" quickrun " {{{
-"let g:quickrun_config = {}
-"let g:quickrun_config['markdown'] = {
-"    \ 'type': 'markdown/pandoc',
-"    \ 'cmdopt': '-s',
-"    \ 'outputter': 'browser'
-"    \ }
-"" }}}
+" quickrun " {{{
+let g:quickrun_config = {}
+" }}}
 
 " gist " {{{
 let g:gist_detect_filetype = 1
@@ -105,6 +98,10 @@ call submode#map('winsize', 'n', '', '-', '<C-w>-')
 let g:memolist_memo_suffix = "md"
 let g:memolist_path = "~/Dropbox/Documents/memo"
 let g:memolist_vimfiler = 1
+" }}}
+
+" javascript-libraries-syntax " {{{
+let g:used_javascript_libs = 'jquery'
 " }}}
 " }}}
 
