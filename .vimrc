@@ -280,6 +280,7 @@ nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap [unite]u :<C-u>Unite neobundle/update:all<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 " }}}
 
@@ -307,9 +308,8 @@ if has('autocmd')
     augroup MySettings
         autocmd!
     augroup END
-    autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2
-    autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl softtabstop=2
-    autocmd MySettings BufNewFile,BUfRead *.html,*.php,*.js,*.css setl nowrap
+    autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2 softtabstop=2 nowrap
+    autocmd MySettings BufNewFile,BUfRead *.bat setl nowrap
 
     autocmd FileType * setl formatoptions-=ro
 endif
