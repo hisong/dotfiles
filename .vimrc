@@ -309,7 +309,7 @@ if has('autocmd')
         autocmd!
     augroup END
     autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2 softtabstop=2 nowrap
-    autocmd MySettings BufNewFile,BUfRead *.bat setl nowrap
+    autocmd MySettings BufNewFile,BUfRead *.bat,*.log setl nowrap
 
     autocmd FileType * setl formatoptions-=ro
 endif
