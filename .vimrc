@@ -12,9 +12,9 @@ endif
 
 " ------------------------------
 " plugins " {{{
-NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/Shougo/vimproc.git', {
+NeoBundle 'Shougo/neobundle.vim.git'
+NeoBundle 'Shougo/unite.vim.git'
+NeoBundle 'Shougo/vimproc.git', {
             \   'build' : {
             \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
             \       'cygwin'    : 'make -f make_cygwin.mak',
@@ -22,28 +22,28 @@ NeoBundle 'git://github.com/Shougo/vimproc.git', {
             \       'unix'      : 'make -f make_unix.mak',
             \   },
             \ }
-NeoBundle 'git://github.com/Shougo/vimshell.git'
-NeoBundle 'git://github.com/Shougo/vimfiler.git'
-NeoBundle 'git://github.com/tpope/vim-surround.git'
-NeoBundle 'git://github.com/scrooloose/nerdtree.git'
-NeoBundle 'git://github.com/tyru/open-browser.vim.git'
-NeoBundle 'git://github.com/mattn/webapi-vim.git'
-NeoBundle 'git://github.com/mattn/gist-vim.git'
-NeoBundle 'git://github.com/mattn/zencoding-vim.git'
-NeoBundle 'git://github.com/kana/vim-operator-user.git'
-NeoBundle 'git://github.com/kana/vim-operator-replace.git'
-NeoBundle 'git://github.com/kana/vim-fakeclip.git'
-NeoBundle 'git://github.com/kana/vim-submode.git'
-NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
-NeoBundle 'git://github.com/glidenote/memolist.vim.git'
-NeoBundle 'git://github.com/kmnk/vim-unite-giti.git'
-NeoBundle 'git://github.com/h1mesuke/vim-alignta.git'
-NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
-NeoBundle 'git://github.com/othree/html5.vim.git'
-NeoBundle 'git://github.com/othree/javascript-libraries-syntax.vim.git'
-NeoBundle 'git://github.com/hail2u/vim-css3-syntax.git'
-NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
-NeoBundleLazy 'git://github.com/altercation/vim-colors-solarized.git'
+NeoBundle 'Shougo/vimshell.git'
+NeoBundle 'Shougo/vimfiler.git'
+NeoBundle 'tpope/vim-surround.git'
+NeoBundle 'scrooloose/nerdtree.git'
+NeoBundle 'tyru/open-browser.vim.git'
+NeoBundle 'mattn/webapi-vim.git'
+NeoBundle 'mattn/gist-vim.git'
+NeoBundle 'mattn/zencoding-vim.git'
+NeoBundle 'kana/vim-operator-user.git'
+NeoBundle 'kana/vim-operator-replace.git'
+NeoBundle 'kana/vim-fakeclip.git'
+NeoBundle 'kana/vim-submode.git'
+NeoBundle 'Lokaltog/vim-powerline.git'
+NeoBundle 'glidenote/memolist.vim.git'
+NeoBundle 'kmnk/vim-unite-giti.git'
+NeoBundle 'h1mesuke/vim-alignta.git'
+NeoBundle 'vim-ruby/vim-ruby.git'
+NeoBundle 'othree/html5.vim.git'
+NeoBundle 'othree/javascript-libraries-syntax.vim.git'
+NeoBundle 'hail2u/vim-css3-syntax.git'
+NeoBundle 'vim-scripts/sudo.vim.git'
+NeoBundleLazy 'altercation/vim-colors-solarized.git'
 
 filetype plugin indent on
 " }}}
