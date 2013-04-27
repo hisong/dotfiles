@@ -91,7 +91,9 @@ call submode#map('winsize', 'n', '', '-', '<C-w>-')
 " }}}
 
 " vim-powerline " {{{
-"let g:Powerline_symbols = 'fancy'
+if has('mac')
+    let g:Powerline_symbols = 'fancy'
+endif
 " }}}
 
 " memolist " {{{
