@@ -93,6 +93,8 @@ call submode#map('winsize', 'n', '', '-', '<C-w>-')
 " vim-powerline " {{{
 if has('mac')
     let g:Powerline_symbols = 'fancy'
+elseif has("unix")
+    let g:Powerline_symbols = 'fancy'
 endif
 " }}}
 
