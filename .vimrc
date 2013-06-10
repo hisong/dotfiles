@@ -90,14 +90,14 @@ call submode#map('winsize', 'n', '', '+', '<C-w>+')
 call submode#map('winsize', 'n', '', '-', '<C-w>-')
 " }}}
 
-" vim-powerline " {{{
-if has('win32unix')
-elseif has('mac')
-    let g:Powerline_symbols = 'fancy'
-elseif has("unix")
-    let g:Powerline_symbols = 'fancy'
-endif
-" }}}
+"" vim-powerline " {{{
+"if has('win32unix')
+"elseif has('mac')
+"    let g:Powerline_symbols = 'fancy'
+"elseif has("unix")
+"    let g:Powerline_symbols = 'fancy'
+"endif
+"" }}}
 
 " memolist " {{{
 let g:memolist_memo_suffix = "md"
