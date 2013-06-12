@@ -22,8 +22,8 @@ NeoBundle 'Shougo/vimproc.git', {
             \       'unix'      : 'make -f make_unix.mak',
             \   },
             \ }
-NeoBundle 'Shougo/vimshell.git'
-NeoBundle 'Shougo/vimfiler.git'
+"NeoBundle 'Shougo/vimshell.git'
+"NeoBundle 'Shougo/vimfiler.git'
 NeoBundle 'tpope/vim-surround.git'
 NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'tyru/open-browser.vim.git'
@@ -35,14 +35,15 @@ NeoBundle 'kana/vim-operator-replace.git'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'kana/vim-submode.git'
 NeoBundle 'Lokaltog/vim-powerline.git'
-NeoBundle 'glidenote/memolist.vim.git'
-NeoBundle 'kmnk/vim-unite-giti.git'
+"NeoBundle 'glidenote/memolist.vim.git'
+"NeoBundle 'kmnk/vim-unite-giti.git'
 NeoBundle 'h1mesuke/vim-alignta.git'
-NeoBundle 'vim-ruby/vim-ruby.git'
+"NeoBundle 'vim-ruby/vim-ruby.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'othree/javascript-libraries-syntax.vim.git'
 NeoBundle 'hail2u/vim-css3-syntax.git'
 NeoBundle 'vim-scripts/sudo.vim.git'
+NeoBundle 'vim-jp/vimdoc-ja.git'
 NeoBundleLazy 'altercation/vim-colors-solarized.git'
 
 filetype plugin indent on
@@ -61,13 +62,13 @@ let g:unite_source_file_mru_limit = 50
 let g:unite_source_file_mru_filename_format = ''
 " }}}
 
-" vimfiler " {{{
-let g:vimfiler_as_default_explorer = 1
-" }}}
+"" vimfiler " {{{
+"let g:vimfiler_as_default_explorer = 1
+"" }}}
 
-" quickrun " {{{
-let g:quickrun_config = {}
-" }}}
+"" quickrun " {{{
+"let g:quickrun_config = {}
+"" }}}
 
 " gist " {{{
 let g:gist_detect_filetype = 1
@@ -99,11 +100,11 @@ call submode#map('winsize', 'n', '', '-', '<C-w>-')
 "endif
 "" }}}
 
-" memolist " {{{
-let g:memolist_memo_suffix = "md"
-let g:memolist_path = "~/Dropbox/Documents/memo"
-let g:memolist_vimfiler = 1
-" }}}
+"" memolist " {{{
+"let g:memolist_memo_suffix = "md"
+"let g:memolist_path = "~/Dropbox/Documents/memo"
+"let g:memolist_vimfiler = 1
+"" }}}
 
 " javascript-libraries-syntax " {{{
 let g:used_javascript_libs = 'jquery'
@@ -174,7 +175,7 @@ set commentstring=\"%s
 " ------------------------------
 " list " {{{
 set list
-set listchars=eol:~,tab:>-,trail:-,nbsp:%,extends:>,precedes:<
+set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
 " }}}
 
 " ------------------------------
