@@ -25,7 +25,7 @@ NeoBundle 'Shougo/vimproc.git', {
 "NeoBundle 'Shougo/vimshell.git'
 "NeoBundle 'Shougo/vimfiler.git'
 NeoBundle 'tpope/vim-surround.git'
-NeoBundle 'scrooloose/nerdtree.git'
+"NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'tyru/open-browser.vim.git'
 NeoBundle 'mattn/webapi-vim.git'
 NeoBundle 'mattn/gist-vim.git'
