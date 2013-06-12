@@ -290,22 +290,22 @@ nnoremap [unite]u :<C-u>Unite neobundle/update:all<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 " }}}
 
-" vimfiler keymap " {{{
-nnoremap <silent> <Leader>vf :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
-" }}}
+"" vimfiler keymap " {{{
+"nnoremap <silent> <Leader>vf :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
+"" }}}
 
-" NERD Tree keymap " {{{
-nmap <silent> <Leader>n :NERDTreeToggle<CR>
-" }}}
+"" NERD Tree keymap " {{{
+"nmap <silent> <Leader>n :NERDTreeToggle<CR>
+"" }}}
 
-" memolist keymap " {{{
-nnoremap [memolist] <Nop>
-nmap <Leader>m [memolist]
-nnoremap <silent> [memolist]n :<C-u>MemoNew<CR>
-nnoremap <silent> [memolist]l :<C-u>MemoList<CR>
-nnoremap <silent> [memolist]g :<C-u>Unite grep:<C-r>=g:memolist_path."/"<CR><CR>
-nnoremap <silent> [memolist]u :<C-u>Unite file:<C-r>=g:memolist_path."/"<CR><CR>
-" }}}
+"" memolist keymap " {{{
+"nnoremap [memolist] <Nop>
+"nmap <Leader>m [memolist]
+"nnoremap <silent> [memolist]n :<C-u>MemoNew<CR>
+"nnoremap <silent> [memolist]l :<C-u>MemoList<CR>
+"nnoremap <silent> [memolist]g :<C-u>Unite grep:<C-r>=g:memolist_path."/"<CR><CR>
+"nnoremap <silent> [memolist]u :<C-u>Unite file:<C-r>=g:memolist_path."/"<CR><CR>
+"" }}}
 " }}}
 
 " ------------------------------
