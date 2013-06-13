@@ -265,6 +265,7 @@ inoremap <silent> <C-p> <Up>
 inoremap <silent> <C-n> <Down>
 inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
+inoremap <silent> <expr> <C-k> col('.')==col('$')?'':'<C-o>D'
 vnoremap <silent> v $h
 vmap <silent> <Leader>y "*y
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
