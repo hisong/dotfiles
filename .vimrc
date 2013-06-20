@@ -1,13 +1,12 @@
 scriptencoding utf-8
 set nocompatible
-filetype plugin indent off
 
 " ------------------------------
 " NeoBundle " {{{
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
-    call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+call neobundle#rc(expand('~/.vim/bundle/'))
 " }}}
 
 " ------------------------------
@@ -22,10 +21,7 @@ NeoBundle 'Shougo/vimproc.git', {
             \       'unix'      : 'make -f make_unix.mak',
             \   },
             \ }
-"NeoBundle 'Shougo/vimshell.git'
-"NeoBundle 'Shougo/vimfiler.git'
 NeoBundle 'tpope/vim-surround.git'
-"NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'tyru/open-browser.vim.git'
 NeoBundle 'mattn/webapi-vim.git'
 NeoBundle 'mattn/gist-vim.git'
@@ -35,10 +31,7 @@ NeoBundle 'kana/vim-operator-replace.git'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'kana/vim-submode.git'
 NeoBundle 'Lokaltog/vim-powerline.git'
-"NeoBundle 'glidenote/memolist.vim.git'
-"NeoBundle 'kmnk/vim-unite-giti.git'
 NeoBundle 'h1mesuke/vim-alignta.git'
-"NeoBundle 'vim-ruby/vim-ruby.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'othree/javascript-libraries-syntax.vim.git'
 NeoBundle 'hail2u/vim-css3-syntax.git'
@@ -62,14 +55,6 @@ let g:unite_source_file_mru_limit = 50
 let g:unite_source_file_mru_filename_format = ''
 " }}}
 
-"" vimfiler " {{{
-"let g:vimfiler_as_default_explorer = 1
-"" }}}
-
-"" quickrun " {{{
-"let g:quickrun_config = {}
-"" }}}
-
 " gist " {{{
 let g:gist_detect_filetype = 1
 let g:gist_show_privates = 1
@@ -90,21 +75,6 @@ call submode#map('winsize', 'n', '', '<', '<C-w><')
 call submode#map('winsize', 'n', '', '+', '<C-w>+')
 call submode#map('winsize', 'n', '', '-', '<C-w>-')
 " }}}
-
-"" vim-powerline " {{{
-"if has('win32unix')
-"elseif has('mac')
-"    let g:Powerline_symbols = 'fancy'
-"elseif has("unix")
-"    let g:Powerline_symbols = 'fancy'
-"endif
-"" }}}
-
-"" memolist " {{{
-"let g:memolist_memo_suffix = "md"
-"let g:memolist_path = "~/Dropbox/Documents/memo"
-"let g:memolist_vimfiler = 1
-"" }}}
 
 " javascript-libraries-syntax " {{{
 let g:used_javascript_libs = 'jquery'
@@ -290,23 +260,6 @@ nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap [unite]u :<C-u>Unite neobundle/update:all<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 " }}}
-
-"" vimfiler keymap " {{{
-"nnoremap <silent> <Leader>vf :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
-"" }}}
-
-"" NERD Tree keymap " {{{
-"nmap <silent> <Leader>n :NERDTreeToggle<CR>
-"" }}}
-
-"" memolist keymap " {{{
-"nnoremap [memolist] <Nop>
-"nmap <Leader>m [memolist]
-"nnoremap <silent> [memolist]n :<C-u>MemoNew<CR>
-"nnoremap <silent> [memolist]l :<C-u>MemoList<CR>
-"nnoremap <silent> [memolist]g :<C-u>Unite grep:<C-r>=g:memolist_path."/"<CR><CR>
-"nnoremap <silent> [memolist]u :<C-u>Unite file:<C-r>=g:memolist_path."/"<CR><CR>
-"" }}}
 " }}}
 
 " ------------------------------
