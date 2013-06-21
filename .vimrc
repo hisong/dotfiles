@@ -241,6 +241,7 @@ vmap <silent> <Leader>y "*y
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Leader>a ggVG
 nnoremap <silent> <Leader>t :<C-u>tabnew<CR>
+nnoremap / /\v
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
