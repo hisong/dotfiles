@@ -241,7 +241,7 @@ vmap <silent> <Leader>y "*y
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Leader>a ggVG
 nnoremap <silent> <Leader>t :<C-u>tabnew<CR>
-nnoremap / /\v
+nnoremap <Leader>/ /\v
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
@@ -269,7 +269,7 @@ if has('autocmd')
     augroup MySettings
         autocmd!
     augroup END
-    autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css setl shiftwidth=2 softtabstop=2 nowrap
+    autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap
     autocmd MySettings BufNewFile,BUfRead *.bat,*.log setl nowrap
 
     autocmd FileType * setl formatoptions-=ro
