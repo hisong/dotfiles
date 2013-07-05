@@ -13,6 +13,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " plugins " {{{
 NeoBundle 'Shougo/neobundle.vim.git'
 NeoBundle 'Shougo/unite.vim.git'
+NeoBundle 'Shougo/neocomplete.vim.git'
 NeoBundle 'Shougo/vimproc.git', {
             \   'build' : {
             \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -54,6 +55,10 @@ let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_file_mru_limit = 50
 let g:unite_source_file_mru_filename_format = ''
+" }}}
+
+" neocomplete.vim " {{{
+let g:neocomplete#enable_at_startup = 1
 " }}}
 
 " gist " {{{
