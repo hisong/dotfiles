@@ -30,6 +30,7 @@ NeoBundle 'kana/vim-operator-user.git'
 NeoBundle 'kana/vim-operator-replace.git'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'kana/vim-submode.git'
+NeoBundle 'osyo-manga/unite-fold.git'
 NeoBundle 'Lokaltog/vim-powerline.git'
 NeoBundle 'h1mesuke/vim-alignta.git'
 NeoBundle 'othree/html5.vim.git'
@@ -271,6 +272,7 @@ if has('autocmd')
     augroup END
     autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap
     autocmd MySettings BufNewFile,BUfRead *.bat,*.log setl nowrap
+    autocmd MySettings QuickFixCmdPost *grep* cwindow
 
     autocmd FileType * setl formatoptions-=ro
 endif
