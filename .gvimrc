@@ -24,11 +24,11 @@ colorscheme solarized
 " ------------------------------
 " font " {{{
 if has('win32')
-    set guifont=Ricty Discord:h10
+    set guifont=Ricty:h10
     " おそらくWindowsでしか印刷は使わない
-    set printfont=Ricty Discord:h10
+    set printfont=Ricty:h10
 else
-    set guifont=Ricty Discord:h14
+    set guifont=Ricty:h14
 endif
 " }}}
 
