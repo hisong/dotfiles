@@ -14,6 +14,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle 'Shougo/neobundle.vim.git'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/neocomplete.vim.git'
+NeoBundle 'Shougo/vimshell.vim.git'
 NeoBundle 'Shougo/vimproc.git', {
             \   'build' : {
             \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
