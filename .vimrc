@@ -246,7 +246,7 @@ inoremap <silent> <expr> <C-k> col('.')==col('$')?'':'<C-o>D'
 vnoremap <silent> v $h
 vmap <silent> <Leader>y "*y
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
-nnoremap <silent> <Leader>a ggVG
+nnoremap <silent> <Leader>a ggVG"*y
 nnoremap <silent> <Leader>t :<C-u>tabnew<CR>
 nnoremap <Leader>/ /\v
 noremap <silent> j gj
