@@ -15,6 +15,7 @@ NeoBundle 'Shougo/neobundle.vim.git'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/neocomplete.vim.git'
 NeoBundle 'Shougo/vimshell.vim.git'
+NeoBundle 'Shougo/vimfiler.vim.git'
 NeoBundle 'Shougo/vimproc.git', {
             \   'build' : {
             \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -56,6 +57,10 @@ let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_file_mru_limit = 50
 let g:unite_source_file_mru_filename_format = ''
+" }}}
+
+" vimfiler " {{{
+let g:vimfiler_as_default_explorer = 1
 " }}}
 
 " neocomplete.vim " {{{
@@ -260,13 +265,13 @@ nmap <silent> <Leader>P "*P
 " Unite keymap " {{{
 nnoremap [unite] <Nop>
 nmap <Leader>u [unite]
-nnoremap <silent> [unite]a :<C-u>Unite buffer file_mru file history/yank<CR>
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
-nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap [unite]a :<C-u>Unite buffer file_mru file history/yank<CR>
+nnoremap [unite]b :<C-u>Unite buffer<CR>
+nnoremap [unite]f :<C-u>UniteWithBufferDir file -buffer-name=files<CR>
+nnoremap [unite]m :<C-u>Unite file_mru<CR>
+nnoremap [unite]r :<C-u>Unite register -buffer-name=register<CR>
 nnoremap [unite]u :<C-u>Unite neobundle/update:all<CR>
-nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+nnoremap [unite]y :<C-u>Unite history/yank<CR>
 " }}}
 " }}}
 
