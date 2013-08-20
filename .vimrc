@@ -28,13 +28,13 @@ NeoBundle 'tpope/vim-surround.git'
 NeoBundle 'tyru/open-browser.vim.git'
 NeoBundle 'mattn/webapi-vim.git'
 NeoBundle 'mattn/gist-vim.git'
-NeoBundle 'mattn/zencoding-vim.git'
+NeoBundle 'mattn/emmet-vim.git'
 NeoBundle 'kana/vim-operator-user.git'
 NeoBundle 'kana/vim-operator-replace.git'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'kana/vim-submode.git'
 NeoBundle 'osyo-manga/unite-fold.git'
-NeoBundle 'Lokaltog/vim-powerline.git'
+NeoBundle 'bling/vim-airline.git'
 NeoBundle 'h1mesuke/vim-alignta.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'othree/javascript-libraries-syntax.vim.git'
@@ -55,7 +55,7 @@ let g:plugin_verifyenc_disable = 1
 " unite.vim " {{{
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
-let g:unite_source_file_mru_limit = 50
+let g:unite_source_file_mru_limit = 200
 let g:unite_source_file_mru_filename_format = ''
 " }}}
 
@@ -86,6 +86,11 @@ call submode#map('winsize', 'n', '', '>', '<C-w>>')
 call submode#map('winsize', 'n', '', '<', '<C-w><')
 call submode#map('winsize', 'n', '', '+', '<C-w>+')
 call submode#map('winsize', 'n', '', '-', '<C-w>-')
+" }}}
+
+" airline " {{{
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 " }}}
 
 " javascript-libraries-syntax " {{{
@@ -267,9 +272,9 @@ nnoremap [unite] <Nop>
 nmap <Leader>u [unite]
 nnoremap [unite]a :<C-u>Unite buffer file_mru file history/yank<CR>
 nnoremap [unite]b :<C-u>Unite buffer<CR>
-nnoremap [unite]f :<C-u>UniteWithBufferDir file -buffer-name=files<CR>
+nnoremap [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap [unite]m :<C-u>Unite file_mru<CR>
-nnoremap [unite]r :<C-u>Unite register -buffer-name=register<CR>
+nnoremap [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap [unite]u :<C-u>Unite neobundle/update:all<CR>
 nnoremap [unite]y :<C-u>Unite history/yank<CR>
 " }}}
