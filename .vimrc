@@ -34,7 +34,7 @@ NeoBundle 'kana/vim-operator-replace.git'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'kana/vim-submode.git'
 NeoBundle 'osyo-manga/unite-fold.git'
-NeoBundle 'bling/vim-airline.git'
+NeoBundle 'itchyny/lightline.vim.git'
 NeoBundle 'h1mesuke/vim-alignta.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'othree/javascript-libraries-syntax.vim.git'
@@ -86,11 +86,6 @@ call submode#map('winsize', 'n', '', '>', '<C-w>>')
 call submode#map('winsize', 'n', '', '<', '<C-w><')
 call submode#map('winsize', 'n', '', '+', '<C-w>+')
 call submode#map('winsize', 'n', '', '-', '<C-w>-')
-" }}}
-
-" airline " {{{
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 " }}}
 
 " javascript-libraries-syntax " {{{
