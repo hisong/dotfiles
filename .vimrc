@@ -36,6 +36,7 @@ NeoBundle 'kana/vim-submode.git'
 NeoBundle 'osyo-manga/unite-fold.git'
 NeoBundle 'itchyny/lightline.vim.git'
 NeoBundle 'h1mesuke/vim-alignta.git'
+NeoBundle 'rhysd/clever-f.vim.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'othree/javascript-libraries-syntax.vim.git'
 NeoBundle 'hail2u/vim-css3-syntax.git'
@@ -86,6 +87,20 @@ call submode#map('winsize', 'n', '', '>', '<C-w>>')
 call submode#map('winsize', 'n', '', '<', '<C-w><')
 call submode#map('winsize', 'n', '', '+', '<C-w>+')
 call submode#map('winsize', 'n', '', '-', '<C-w>-')
+" }}}
+
+" lightline " {{{
+let g:lightline = {
+    \ 'colorscheme': 'solarized'
+    \ }
+" }}}
+
+" clever-f " {{{
+let g:clever_f_ignore_case = 1
+let g:clever_f_smart_case = 1
+let g:clever_f_use_migemo = 1
+let g:clever_f_fix_key_direction = 1
+let g:clever_f_chars_match_any_signs = ';'
 " }}}
 
 " javascript-libraries-syntax " {{{
