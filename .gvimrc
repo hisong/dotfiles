@@ -22,6 +22,11 @@ colorscheme solarized
 " }}}
 
 " ------------------------------
+" list " {{{
+set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
+" }}}
+
+" ------------------------------
 " font " {{{
 if has('win32')
     set guifont=Ricty:h10
