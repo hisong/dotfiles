@@ -179,8 +179,9 @@ set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
 " tab " {{{
 set expandtab
 set smarttab
+set tabstop=4
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=0
 " }}}
 
 " ------------------------------
