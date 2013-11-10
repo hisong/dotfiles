@@ -1,8 +1,74 @@
-setopt no_beep                # ビープを無効化
-setopt auto_pushd             # cd時にTab補完
-setopt pushd_ignore_dups      # ディレクトリスタックの重複を削除(古い方)
-DIRSTACKSIZE=20               # ディレクトリスタックの数を設定
-setopt ignoreeof              # Ctrl-Dでのログオフを無効化
+# Emacs風キーバインド
+bindkey -e
+
+# プロンプト
+autoload -Uz colors; colors
+## エスケープシーケンスを有効にする
+setopt prompt_subst
+## 通常のプロンプト
+PROMPT="
+%{${fg[red]}%}[%*] %{${fg[blue]}%}${USER}@${HOST} %{${fg[yellow]}%}%~%{${reset_color}%}
+%(!.#.$) "
+## 入力間違い時のメッセージ
+SPROMPT="%{${fg[red]}%}%r is correct?%{${reset_color}%} [%BY%bes, %BN%bo, %BA%bbort, %BE%bdit]: "
+## 色付け
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
+# ディレクトリ移動
+## ディレクトリ名だけでcdする
+setopt auto_cd
+## cdで移動してもpushdと同じようにディレクトリスタックに追加する
+setopt auto_pushd
+## ディレクトリスタックの古い方の重複を削除する
+setopt pushd_ignore_dups
+## ディレクトリスタックの数を設定する
+DIRSTACKSIZE=20
+
+# ヒストリ
+## ヒストリを保存するファイルを指定する
+HISTFILE=${HOME}/.zsh_history
+## ヒストリサイズを指定する
+HISTSIZE=1000000
+## 保存するヒストリ数を指定する
+SAVEHIST=${HISTSIZE}
+## ヒストリファイルにコマンドだけではなく実行時刻と実行時間も保存する
+setopt extended_history
+## 重複するコマンドが記憶される時に古い方を削除する
+setopt hist_ignore_all_dups
+## 同じコマンドを連続で実行した場合はヒストリに登録しない
+setopt hist_ignore_dups
+## 重複するコマンドが補完される時に古い方を削除する
+setopt hist_save_no_dups
+## スペースで始まるコマンドはヒストリに追加しない
+setopt hist_ignore_space
+## すぐにヒストリファイルに追記する
+setopt inc_append_history
+## zshプロセス間でヒストリを共有する
+setopt share_history
+
+# 補完
+## 初期化
+autoload -Uz compinit; compinit
+## --prefix= とかの後のパス名も補完する
+setopt magic_equal_subst
+## カーソル位置で補完する
+setopt complete_in_word
+## 補完時にヒストリを自動的に展開する
+setopt hist_expand
+## 辞書順ではなく数字順に並べる
+setopt numeric_glob_sort
+## 間違い訂正
+setopt correct_all
+## 補完候補のカーソル選択を有効化
+zstyle ':completion:*' menu select=1
+## 補完候補の色づけ
+zstyle ':completion:*' list-colors ${(s.:.)LSCOLORS}
+
+# その他
+## ビープ音を鳴らさない
+setopt no_beep
+## Ctrl-Dでのログオフを無効にする
+setopt ignoreeof
 
 function launcheditor() {
   exec < /dev/tty
