@@ -22,37 +22,30 @@ export EDITOR=vim
 #       /: ディレクトリのみ残す
 #       .: 通常のファイルのみ残す
 #--------------------------------------------------
-# mac側の設定--------------------------------------
-### 重複パスを登録しない
-#typeset -U path cdpath fpath manpath
-### sudo用のpathを設定
-#typeset -xT SUDO_PATH sudo_path
-#typeset -U sudo_path
-#sudo_path=({/usr/local,/usr,}/sbin(N-/))
-### pathを設定
-#path=(~/bin(N-/) /usr/local/bin(N-/) ~/nexus7/adt-bundle-mac-x86_64-20130514/sdk/platform-tools(N-/) ${path})
-### fpathを設定
-##fpath=(~/.zsh/functions/Completion(N-/) ${fpath})
-### zsh-completions
-### git://github.com/zsh-users/zsh-completions.git
-#fpath=(~/.zsh/functions/Completion/zsh-completions(N-/) ${fpath})
-#--------------------------------------------------
 path=(
+  # 共通
   ${HOME}/bin(N-/)
+  # linux用
   /usr/lib/lightdm/lightdm(N-/)
   {/usr/local,/usr,}{/sbin,/bin}(N-/)
+  # mac用
+  ${HOME}/nexus7/adt-bundle-mac-x86_64-20130514/sdk/platform-tools(N-/)
+  # 共通
+  ${path}
 )
 typeset -gxU path
 
 ## fpath
 fpath=(
-${HOME}/dotfiles/.zsh.d/functions/zsh-completions(N-/)
+  ${HOME}/dotfiles/.zsh.d/functions/zsh-completions(N-/)
+  ${fpath}
 )
 typeset -gxU fpath
 
 ## manpath
 manpath=(
   {/usr/local,/usr}{,/share}/man(N-/)
+  ${manpath}
 )
 typeset -gxU manpath
 

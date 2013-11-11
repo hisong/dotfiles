@@ -265,7 +265,6 @@ inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
 inoremap <silent> <expr> <C-k> col('.')==col('$')?'':'<C-o>D'
 vnoremap <silent> v $h
-vmap <silent> <Leader>y "*y
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Leader>a ggVG"*y
 nnoremap <silent> <Leader>t :<C-u>tabnew<CR>
@@ -275,8 +274,8 @@ noremap <silent> k gk
 noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
 nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
-nmap <silent> <Leader>p "*p
-nmap <silent> <Leader>P "*P
+nmap <silent> <Leader>p "+p
+nmap <silent> <Leader>P "+P
 
 " Unite keymap " {{{
 nnoremap [unite] <Nop>
@@ -288,6 +287,15 @@ nnoremap [unite]m :<C-u>Unite file_mru<CR>
 nnoremap [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap [unite]u :<C-u>Unite neobundle/update:all<CR>
 nnoremap [unite]y :<C-u>Unite history/yank<CR>
+" }}}
+
+" fakeclip keymap " {{{
+if has('unix')
+    noremap <silent> <Leader>y "+y
+    noremap <silent> <Leader>Y "+Y
+    noremap <silent> <Leader>p "+p
+    noremap <silent> <Leader>P "+P
+endif
 " }}}
 " }}}
 

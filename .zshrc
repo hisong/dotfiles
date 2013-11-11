@@ -7,7 +7,8 @@ autoload -Uz colors; colors
 setopt prompt_subst
 ## 通常のプロンプト
 PROMPT="
-%{${fg[red]}%}[%*] %{${fg[blue]}%}${USER}@${HOST} %{${fg[yellow]}%}%~%{${reset_color}%}
+%{${fg[red]}%}[%D{%Y/%m/%d %T}]
+%{${fg[green]}%}${USER}@${HOST} %{${fg[yellow]}%}%~%{${reset_color}%}
 %(!.#.$) "
 ## 入力間違い時のメッセージ
 SPROMPT="%{${fg[red]}%}%r is correct?%{${reset_color}%} [%BY%bes, %BN%bo, %BA%bbort, %BE%bdit]: "
@@ -97,8 +98,23 @@ zle -N history-beginning-search-forward
 bindkey -e
 bindkey '\@' launcheditor
 bindkey '\^' cdup
-bindkey '\-' cdold
-bindkey '^P' history-beginning-search-backward
-bindkey '^N' history-beginning-search-forward
+bindkey '^K' history-beginning-search-backward
+bindkey '^J' history-beginning-search-forward
+
+# エイリアス
+## ファイル表示
+case ${OSTYPE} in
+  darwin*)
+    alias ll='ls -lhaFG'
+    ;;
+  linux*)
+    alias ll='ls -lhaF --color=auto'
+    ;;
+esac
+
+## ファイル操作に確認を入れるようにする
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 # vim:set ft=zsh sw=2 sts=2 nowrap:
