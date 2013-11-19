@@ -15,6 +15,14 @@ SPROMPT="%{${fg[red]}%}%r is correct?%{${reset_color}%} [%BY%bes, %BN%bo, %BA%bb
 ## 色付け
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
+if [ -f ${HOME}/.dircolors ]; then
+  if type dircolors > /dev/null 2>&1; then
+    eval $(dircolors ${HOME}/.dircolors)
+  elif type gdircolors > /dev/null 2>&1; then
+    eval $(gdircolors ${HOME}/.dircolors)
+  fi
+fi
+
 # ディレクトリ移動
 ## ディレクトリ名だけでcdする
 setopt auto_cd
@@ -89,17 +97,20 @@ function cdold() {
   zle reset-prompt
 }
 
+autoload history-search-end
+
 zle -N launcheditor
 zle -N cdup
 zle -N cdold
-zle -N history-beginning-search-backward
-zle -N history-beginning-search-forward
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
 
 bindkey -e
-bindkey '\@' launcheditor
+bindkey '^@' launcheditor
 bindkey '\^' cdup
-bindkey '^K' history-beginning-search-backward
-bindkey '^J' history-beginning-search-forward
+bindkey '^P' history-beginning-search-backward-end
+bindkey '^N' history-beginning-search-forward-end
+bindkey '^R' history-incremental-pattern-search-backward
 
 # エイリアス
 ## ファイル表示
