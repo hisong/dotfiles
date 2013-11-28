@@ -1,12 +1,10 @@
 scriptencoding utf-8
 
-" ------------------------------
-" colorscheme " {{{
+" colorscheme {{{
 NeoBundleSource vim-colors-solarized
 " }}}
 
-" ------------------------------
-" display " {{{
+" display {{{
 set lines=50
 set columns=160
 set showtabline=2
@@ -21,13 +19,11 @@ set background=light
 colorscheme solarized
 " }}}
 
-" ------------------------------
-" list " {{{
+" list {{{
 set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
 " }}}
 
-" ------------------------------
-" font " {{{
+" font {{{
 if has('win32')
     set guifont=Ricty:h10
     " おそらくWindowsでしか印刷は使わない

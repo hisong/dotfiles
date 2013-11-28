@@ -2,13 +2,22 @@
 bindkey -e
 
 # プロンプト
+autoload -Uz vcs_info
 autoload -Uz colors; colors
 ## エスケープシーケンスを有効にする
 setopt prompt_subst
+## vcs関連の設定
+zstyle ':vcs_info:*' formats '(%s)-[%b]'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+precmd () {
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
 ## 通常のプロンプト
 PROMPT="
-%{${fg[red]}%}[%D{%Y/%m/%d %T}]
-%{${fg[green]}%}${USER}@${HOST} %{${fg[yellow]}%}%~%{${reset_color}%}
+%F{red}[%D{%Y/%m/%d %T}]%f
+%F{green}${USER}@${HOST}%f %F{yellow}%~%f %1(v|%F{green}%1v%f|)
 %(!.#.$) "
 ## 入力間違い時のメッセージ
 SPROMPT="%{${fg[red]}%}%r is correct?%{${reset_color}%} [%BY%bes, %BN%bo, %BA%bbort, %BE%bdit]: "

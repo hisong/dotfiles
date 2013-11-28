@@ -1,16 +1,14 @@
 scriptencoding utf-8
 set nocompatible
 
-" ------------------------------
-" NeoBundle " {{{
+" NeoBundle {{{
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 " }}}
 
-" ------------------------------
-" plugins " {{{
+" plugins {{{
 NeoBundle 'Shougo/neobundle.vim.git'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/neocomplete.vim.git'
@@ -47,8 +45,7 @@ NeoBundleLazy 'altercation/vim-colors-solarized.git'
 filetype plugin indent on
 " }}}
 
-" ------------------------------
-" plugins settings " {{{
+" plugins settings {{{
 " Kaoriya " {{{
 let g:plugin_verifyenc_disable = 1
 " }}}
@@ -108,8 +105,7 @@ let g:used_javascript_libs = 'jquery'
 " }}}
 " }}}
 
-" ------------------------------
-" display " {{{
+" display {{{
 set cursorline
 set number
 set ruler
@@ -124,8 +120,7 @@ set term=xterm
 set t_Co=256
 " }}}
 
-" ------------------------------
-" syntax " {{{
+" syntax {{{
 syntax enable
 
 " php settings " {{{
@@ -136,26 +131,22 @@ let php_folding = 1
 " }}}
 " }}}
 
-" ------------------------------
-" search " {{{
+" search {{{
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
 " }}}
 
-" ------------------------------
-" help priority " {{{
+" help priority {{{
 set helplang=ja,en
 " }}}
 
-" ------------------------------
-" print " {{{
+" print {{{
 set printoptions=header:0
 " }}}
 
-" ------------------------------
-" edit " {{{
+" edit {{{
 set autoindent
 set smartindent
 set showmatch
@@ -163,20 +154,17 @@ set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 " }}}
 
-" ------------------------------
-" fold " {{{
+" fold {{{
 set foldmethod=marker
 set commentstring=\"%s
 " }}}
 
-" ------------------------------
-" list " {{{
+" list {{{
 set list
 set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
 " }}}
 
-" ------------------------------
-" tab " {{{
+" tab {{{
 set expandtab
 set smarttab
 set tabstop=4
@@ -184,8 +172,7 @@ set shiftwidth=4
 set softtabstop=0
 " }}}
 
-" ------------------------------
-" backup/swap " {{{
+" backup/swap {{{
 set backup
 set backupdir=~/vimbackup
 set browsedir=current
@@ -193,8 +180,7 @@ set noswapfile
 set directory=~/vimbackup
 " }}}
 
-" ------------------------------
-" encoding " {{{
+" encoding {{{
 "" > http://www.kawaz.jp/pukiwiki/?vim#cb691f26
 if &encoding !=# 'utf-8'
     set encoding=japan
@@ -253,8 +239,7 @@ if exists('&ambiwidth')
 endif
 " }}}
 
-" ------------------------------
-" keymap " {{{
+" keymap {{{
 let mapleader = "m"
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
 inoremap <silent> <C-a> <Home>
@@ -299,12 +284,12 @@ endif
 " }}}
 " }}}
 
-" ------------------------------
-" autocmd " {{{
+" autocmd {{{
 if has('autocmd')
     augroup MySettings
         autocmd!
     augroup END
+
     autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap
     autocmd MySettings BufNewFile,BUfRead *.bat,*.log setl nowrap
     autocmd MySettings QuickFixCmdPost *grep* cwindow
