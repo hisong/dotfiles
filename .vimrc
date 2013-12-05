@@ -23,6 +23,7 @@ NeoBundle 'Shougo/vimproc.git', {
             \   },
             \ }
 NeoBundle 'tpope/vim-surround.git'
+NeoBundle 'tpope/vim-fugitive.git'
 NeoBundle 'tyru/open-browser.vim.git'
 NeoBundle 'mattn/webapi-vim.git'
 NeoBundle 'mattn/gist-vim.git'
@@ -97,7 +98,6 @@ let g:clever_f_ignore_case = 1
 let g:clever_f_smart_case = 1
 let g:clever_f_use_migemo = 1
 let g:clever_f_fix_key_direction = 1
-let g:clever_f_chars_match_any_signs = ';'
 " }}}
 
 " javascript-libraries-syntax " {{{
