@@ -46,7 +46,7 @@ DIRSTACKSIZE=20
 ## ヒストリを保存するファイルを指定する
 HISTFILE=${HOME}/.zsh_history
 ## ヒストリサイズを指定する
-HISTSIZE=1000000
+HISTSIZE=10000
 ## 保存するヒストリ数を指定する
 SAVEHIST=${HISTSIZE}
 ## ヒストリファイルにコマンドだけではなく実行時刻と実行時間も保存する
@@ -81,6 +81,8 @@ setopt correct_all
 zstyle ':completion:*' menu select=1
 ## 補完候補の色づけ
 zstyle ':completion:*' list-colors ${(s.:.)LSCOLORS}
+## 補完時にピリオド,ハイフン,アンダースコアを区切りとして認識させる
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
 # その他
 ## ビープ音を鳴らさない
@@ -116,7 +118,6 @@ zle -N history-beginning-search-forward-end history-search-end
 
 bindkey -e
 bindkey '^@' launcheditor
-bindkey '\^' cdup
 bindkey '^P' history-beginning-search-backward-end
 bindkey '^N' history-beginning-search-forward-end
 bindkey '^R' history-incremental-pattern-search-backward
@@ -136,5 +137,13 @@ esac
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+## スキャンのデフォルト設定
+## モード：カラー
+## 出力先：デスクトップ
+alias scanpnm='scanimage --mode Color > ~/デスクトップ/`date +%Y%m%d%H%M%S`.pnm'
+alias scanjpg='convert -antialias -quality 100 =(scanimage --mode Color) ~/デスクトップ/`date +%Y%m%d%H%M%S`.jpg'
+alias scanpng='convert -antialias -quality 100 =(scanimage --mode Color) ~/デスクトップ/`date +%Y%m%d%H%M%S`.png'
+alias scanpdf='convert -antialias =(scanimage --mode Color) ~/デスクトップ/`date +%Y%m%d%H%M%S`.pdf'
 
 # vim:set ft=zsh sw=2 sts=2 nowrap:

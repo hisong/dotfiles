@@ -41,6 +41,7 @@ NeoBundle 'othree/javascript-libraries-syntax.vim.git'
 NeoBundle 'hail2u/vim-css3-syntax.git'
 NeoBundle 'vim-scripts/sudo.vim.git'
 NeoBundle 'vim-jp/vimdoc-ja.git'
+NeoBundleLazy 'w0ng/vim-hybrid.git'
 NeoBundleLazy 'altercation/vim-colors-solarized.git'
 
 filetype plugin indent on
@@ -88,9 +89,8 @@ call submode#map('winsize', 'n', '', '-', '<C-w>-')
 " }}}
 
 " lightline " {{{
-let g:lightline = {
-    \ 'colorscheme': 'solarized'
-    \ }
+let g:lightline = {}
+let g:lightline.colorscheme = 'solarized'
 " }}}
 
 " clever-f " {{{

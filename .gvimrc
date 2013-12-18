@@ -1,12 +1,12 @@
 scriptencoding utf-8
 
 " colorscheme {{{
-NeoBundleSource vim-colors-solarized
+NeoBundleSource vim-hybrid
 " }}}
 
 " display {{{
-set lines=50
-set columns=160
+set lines=60
+set columns=90
 set showtabline=2
 set guioptions-=e
 set guioptions-=m
@@ -14,9 +14,7 @@ set guioptions-=r
 set guioptions-=T
 set guicursor=a:blinkon0
 set visualbell t_vb=
-set background=light
-"set background=dark
-colorscheme solarized
+colorscheme hybrid
 " }}}
 
 " list {{{
@@ -25,11 +23,11 @@ set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
 
 " font {{{
 if has('win32')
-    set guifont=Ricty:h10
+    set guifont=Ricty\ Discord:h10
     " おそらくWindowsでしか印刷は使わない
-    set printfont=Ricty:h10
+    set printfont=Ricty\ Discord:h10
 else
-    set guifont=Ricty:h14
+    set guifont=Ricty\ Discord:h14
 endif
 " }}}
 
