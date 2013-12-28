@@ -288,13 +288,11 @@ endif
 if has('autocmd')
     augroup MySettings
         autocmd!
+        autocmd BufNewFile,BufRead *.html,*.php,*.js,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap
+        autocmd BufNewFile,BUfRead *.bat,*.log setl nowrap
+        autocmd QuickFixCmdPost *grep* cwindow
+        autocmd FileType * setl formatoptions-=ro
     augroup END
-
-    autocmd MySettings BufNewFile,BufRead *.html,*.php,*.js,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap
-    autocmd MySettings BufNewFile,BUfRead *.bat,*.log setl nowrap
-    autocmd MySettings QuickFixCmdPost *grep* cwindow
-
-    autocmd FileType * setl formatoptions-=ro
 endif
 " }}}
 
