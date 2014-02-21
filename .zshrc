@@ -146,4 +146,6 @@ alias scanjpg='convert -antialias -quality 100 =(scanimage --mode Color) ~/デ�
 alias scanpng='convert -antialias -quality 100 =(scanimage --mode Color) ~/デスクトップ/`date +%Y%m%d%H%M%S`.png'
 alias scanpdf='convert -antialias =(scanimage --mode Color) ~/デスクトップ/`date +%Y%m%d%H%M%S`.pdf'
 
+compdef mosh=ssh
+
 # vim:set ft=zsh sw=2 sts=2 nowrap:

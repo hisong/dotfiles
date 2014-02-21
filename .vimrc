@@ -1,5 +1,4 @@
 scriptencoding utf-8
-set nocompatible
 
 " NeoBundle {{{
 if has('vim_starting')
@@ -28,6 +27,7 @@ NeoBundle 'tyru/open-browser.vim.git'
 NeoBundle 'mattn/webapi-vim.git'
 NeoBundle 'mattn/gist-vim.git'
 NeoBundle 'mattn/emmet-vim.git'
+NeoBundle 'koron/codic-vim.git'
 NeoBundle 'kana/vim-operator-user.git'
 NeoBundle 'kana/vim-operator-replace.git'
 NeoBundle 'kana/vim-fakeclip.git'
@@ -36,6 +36,8 @@ NeoBundle 'osyo-manga/unite-fold.git'
 NeoBundle 'itchyny/lightline.vim.git'
 NeoBundle 'h1mesuke/vim-alignta.git'
 NeoBundle 'rhysd/clever-f.vim.git'
+NeoBundle 'rhysd/unite-codic.vim.git'
+NeoBundle 'Yggdroot/indentLine.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'othree/javascript-libraries-syntax.vim.git'
 NeoBundle 'hail2u/vim-css3-syntax.git'
@@ -100,6 +102,12 @@ let g:clever_f_use_migemo = 1
 let g:clever_f_fix_key_direction = 1
 " }}}
 
+" indentLine " {{{
+let g:indentLine_color_term = 111
+let g:indentLine_color_gui = '#708090'
+let g:indentLine_char = '|'
+" }}}
+
 " javascript-libraries-syntax " {{{
 let g:used_javascript_libs = 'jquery'
 " }}}
@@ -161,7 +169,8 @@ set commentstring=\"%s
 
 " list {{{
 set list
-set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
+"set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
+set listchars=eol:↲,tab:^-,trail:-,nbsp:%,extends:»,precedes:«
 " }}}
 
 " tab {{{
@@ -282,6 +291,10 @@ if has('unix')
     noremap <silent> <Leader>P "+P
 endif
 " }}}
+
+" unite-codic.vim keymap"{{{
+nnoremap [unite]c :<C-u>Unite codic<CR>
+"}}}
 " }}}
 
 " autocmd {{{
@@ -290,6 +303,7 @@ if has('autocmd')
         autocmd!
         autocmd BufNewFile,BufRead *.html,*.php,*.js,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap
         autocmd BufNewFile,BUfRead *.bat,*.log setl nowrap
+        autocmd BufNewFile,BUfRead *.sh setl noexpandtab
         autocmd QuickFixCmdPost *grep* cwindow
         autocmd FileType * setl formatoptions-=ro
     augroup END
