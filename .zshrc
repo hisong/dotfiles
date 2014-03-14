@@ -133,11 +133,6 @@ case ${OSTYPE} in
     ;;
 esac
 
-## ファイル操作に確認を入れるようにする
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
 ## スキャンのデフォルト設定
 ## モード：カラー
 ## 出力先：デスクトップ
