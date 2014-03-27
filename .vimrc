@@ -37,6 +37,7 @@ NeoBundle 'itchyny/lightline.vim.git'
 NeoBundle 'h1mesuke/vim-alignta.git'
 NeoBundle 'rhysd/clever-f.vim.git'
 NeoBundle 'rhysd/unite-codic.vim.git'
+NeoBundle 'Lokaltog/vim-easymotion.git'
 NeoBundle 'Yggdroot/indentLine.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'othree/javascript-libraries-syntax.vim.git'
@@ -100,6 +101,10 @@ let g:clever_f_ignore_case = 1
 let g:clever_f_smart_case = 1
 let g:clever_f_use_migemo = 1
 let g:clever_f_fix_key_direction = 1
+" }}}
+
+" EasyMotion " {{{
+let g:EasyMotion_do_mapping = 0
 " }}}
 
 " indentLine " {{{
