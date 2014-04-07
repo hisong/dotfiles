@@ -133,13 +133,12 @@ case ${OSTYPE} in
     ;;
 esac
 
-## スキャンのデフォルト設定
-## モード：カラー
-## 出力先：デスクトップ
-alias scanpnm='scanimage --mode Color > ~/デスクトップ/`date +%Y%m%d%H%M%S`.pnm'
-alias scanjpg='convert -antialias -quality 100 =(scanimage --mode Color) ~/デスクトップ/`date +%Y%m%d%H%M%S`.jpg'
-alias scanpng='convert -antialias -quality 100 =(scanimage --mode Color) ~/デスクトップ/`date +%Y%m%d%H%M%S`.png'
-alias scanpdf='convert -antialias =(scanimage --mode Color) ~/デスクトップ/`date +%Y%m%d%H%M%S`.pdf'
+# クリップボードへのコピー
+if which pbcopy > /dev/null 2>&1; then
+  alias -g c='| pbcopy'
+elif which xclip > /dev/null 2>&1; then
+  alias -g c='| xclip -i -sel c'
+fi
 
 compdef mosh=ssh
 

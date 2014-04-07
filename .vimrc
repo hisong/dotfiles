@@ -13,7 +13,7 @@ NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/neocomplete.vim.git'
 NeoBundle 'Shougo/vimshell.vim.git'
 NeoBundle 'Shougo/vimfiler.vim.git'
-NeoBundle 'Shougo/vimproc.git', {
+NeoBundle 'Shougo/vimproc.vim.git', {
             \   'build' : {
             \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
             \       'cygwin'    : 'make -f make_cygwin.mak',
