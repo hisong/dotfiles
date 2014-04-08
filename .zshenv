@@ -34,8 +34,8 @@ path=(
   # linux用
   /usr/lib/lightdm/lightdm(N-/)
   {/usr/local,/usr,}{/sbin,/bin}(N-/)
-  /usr/local/android-studio/sdk/{tools,platform-tools}(N-/)
-  /usr/local/android-studio/bin(N-/)
+  ${HOME}/bin/android-studio/sdk/{tools,platform-tools}(N-/)
+  ${HOME}/bin/android-studio/bin(N-/)
   # mac用
   ${HOME}/nexus7/adt-bundle-mac-x86_64-20130514/sdk/platform-tools(N-/)
   # 共通
