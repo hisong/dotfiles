@@ -9,7 +9,7 @@ export EDITOR=vim
 export JAVA_HOME=/usr/lib/jvm/java-6-oracle
 
 ## ANDROID_HOME
-export ANDROID_HOME=/usr/local/android-studio/sdk
+export ANDROID_HOME=${HOME}/bin/android-studio/sdk
 
 ## path
 #--------------------------------------------------
