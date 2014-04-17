@@ -164,7 +164,7 @@ set autoindent
 set smartindent
 set showmatch
 set backspace=indent,eol,start
-set clipboard=unnamed,autoselect
+set clipboard=unnamedplus
 " }}}
 
 " fold {{{
