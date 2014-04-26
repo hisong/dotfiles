@@ -37,7 +37,7 @@ path=(
   ${HOME}/bin/android-studio/sdk/{tools,platform-tools}(N-/)
   ${HOME}/bin/android-studio/bin(N-/)
   # mac用
-  ${HOME}/nexus7/adt-bundle-mac-x86_64-20130514/sdk/platform-tools(N-/)
+  ${HOME}/adt-bundle-mac-x86_64-20131030/sdk/platform-tools(N-/)
   # 共通
   ${path}
 )
