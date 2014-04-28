@@ -11,6 +11,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle 'Shougo/neobundle.vim.git'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/neocomplete.vim.git'
+NeoBundle 'Shougo/neosnippet.vim.git'
 NeoBundle 'Shougo/vimshell.vim.git'
 NeoBundle 'Shougo/vimfiler.vim.git'
 NeoBundle 'Shougo/vimproc.vim.git', {
