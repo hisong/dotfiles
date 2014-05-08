@@ -5,6 +5,9 @@ export LANG=ja_JP.UTF-8
 ## EDITOR
 export EDITOR=vim
 
+## GIT_PAGER
+export GIT_PAGER="lv -c"
+
 ## Java
 export JAVA_HOME=/usr/lib/jvm/java-6-oracle
 
