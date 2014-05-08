@@ -140,6 +140,12 @@ elif which xclip > /dev/null 2>&1; then
   alias -g c='| xclip -i -sel c'
 fi
 
+# 検索関連エイリアス
+if which w3m > /dev/null 2>&1; then
+  alias ggl='w3m "https://www.google.co.jp"'
+  alias ddg='w3m "https://duckduckgo.com/?kl=jp-jp\&kp=-1\&ki=-1"'
+fi
+
 compdef mosh=ssh
 
 # vim:set ft=zsh sw=2 sts=2 nowrap:
