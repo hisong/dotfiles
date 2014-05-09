@@ -19,8 +19,8 @@ PROMPT="
 %F{red}[%D{%Y/%m/%d %T}]%f
 %F{green}${USER}@${HOST}%f %F{yellow}%~%f %1(v|%F{green}%1v%f|)
 %(!.#.$) "
-## 入力間違い時のメッセージ
-SPROMPT="%{${fg[red]}%}%r is correct?%{${reset_color}%} [%BY%bes, %BN%bo, %BA%bbort, %BE%bdit]: "
+### 入力間違い時のメッセージ
+#SPROMPT="%{${fg[red]}%}%r is correct?%{${reset_color}%} [%BY%bes, %BN%bo, %BA%bbort, %BE%bdit]: "
 ## 色付け
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
@@ -75,8 +75,8 @@ setopt complete_in_word
 setopt hist_expand
 ## 辞書順ではなく数字順に並べる
 setopt numeric_glob_sort
-## 間違い訂正
-setopt correct_all
+### 間違い訂正
+#setopt correct_all
 ## 補完候補のカーソル選択を有効化
 zstyle ':completion:*' menu select=1
 ## 補完候補の色づけ
