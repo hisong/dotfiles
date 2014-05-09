@@ -266,7 +266,7 @@ inoremap <silent> <C-f> <Right>
 inoremap <silent> <expr> <C-k> col('.')==col('$')?'':'<C-o>D'
 vnoremap <silent> v $h
 nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
-nnoremap <silent> <Leader>a ggVG"+y
+nnoremap <silent> <Leader>a ggVGy
 nnoremap <silent> <Leader>t :<C-u>tabnew<CR>
 nnoremap <Leader>/ /\v
 noremap <silent> j gj
@@ -274,8 +274,6 @@ noremap <silent> k gk
 noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
 nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
-nmap <silent> <Leader>p "+p
-nmap <silent> <Leader>P "+P
 
 " Unite keymap " {{{
 nnoremap [unite] <Nop>
