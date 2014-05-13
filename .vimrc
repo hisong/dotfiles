@@ -8,13 +8,13 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " }}}
 
 " plugins {{{
-NeoBundle 'Shougo/neobundle.vim.git'
-NeoBundle 'Shougo/unite.vim.git'
-NeoBundle 'Shougo/neocomplete.vim.git'
-NeoBundle 'Shougo/neosnippet.vim.git'
-NeoBundle 'Shougo/vimshell.vim.git'
-NeoBundle 'Shougo/vimfiler.vim.git'
-NeoBundle 'Shougo/vimproc.vim.git', {
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/vimproc.vim', {
             \   'build' : {
             \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
             \       'cygwin'    : 'make -f make_cygwin.mak',
@@ -22,31 +22,31 @@ NeoBundle 'Shougo/vimproc.vim.git', {
             \       'unix'      : 'make -f make_unix.mak',
             \   },
             \ }
-NeoBundle 'tpope/vim-surround.git'
-NeoBundle 'tpope/vim-fugitive.git'
-NeoBundle 'tyru/open-browser.vim.git'
-NeoBundle 'mattn/webapi-vim.git'
-NeoBundle 'mattn/gist-vim.git'
-NeoBundle 'mattn/emmet-vim.git'
-NeoBundle 'koron/codic-vim.git'
-NeoBundle 'kana/vim-operator-user.git'
-NeoBundle 'kana/vim-operator-replace.git'
-NeoBundle 'kana/vim-fakeclip.git'
-NeoBundle 'kana/vim-submode.git'
-NeoBundle 'osyo-manga/unite-fold.git'
-NeoBundle 'itchyny/lightline.vim.git'
-NeoBundle 'h1mesuke/vim-alignta.git'
-NeoBundle 'rhysd/clever-f.vim.git'
-NeoBundle 'rhysd/unite-codic.vim.git'
-NeoBundle 'Lokaltog/vim-easymotion.git'
-NeoBundle 'Yggdroot/indentLine.git'
-NeoBundle 'othree/html5.vim.git'
-NeoBundle 'othree/javascript-libraries-syntax.vim.git'
-NeoBundle 'hail2u/vim-css3-syntax.git'
-NeoBundle 'vim-scripts/sudo.vim.git'
-NeoBundle 'vim-jp/vimdoc-ja.git'
-NeoBundleLazy 'w0ng/vim-hybrid.git'
-NeoBundleLazy 'altercation/vim-colors-solarized.git'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'koron/codic-vim'
+NeoBundle 'kana/vim-operator-user'
+NeoBundle 'kana/vim-operator-replace'
+NeoBundle 'kana/vim-fakeclip'
+NeoBundle 'kana/vim-submode'
+NeoBundle 'osyo-manga/unite-fold'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'rhysd/unite-codic.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'vim-scripts/sudo.vim'
+NeoBundle 'vim-jp/vimdoc-ja'
+NeoBundleLazy 'w0ng/vim-hybrid'
+NeoBundleLazy 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 " }}}
