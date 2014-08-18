@@ -305,7 +305,7 @@ nnoremap [unite]c :<C-u>Unite codic<CR>
 if has('autocmd')
     augroup MySettings
         autocmd!
-        autocmd BufNewFile,BufRead *.html,*.php,*.js,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap
+        autocmd BufNewFile,BufRead *.html,*.php,*.js,*.json,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap
         autocmd BufNewFile,BUfRead *.bat,*.log setl nowrap
         autocmd BufNewFile,BUfRead *.sh setl noexpandtab
         autocmd QuickFixCmdPost *grep* cwindow

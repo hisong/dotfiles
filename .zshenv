@@ -34,11 +34,13 @@ export ANDROID_HOME=${HOME}/bin/android-studio/sdk
 path=(
   # 共通
   ${HOME}/bin(N-/)
+  ${HOME}/.nodebrew/current/bin(N-/)
   # linux用
   /usr/lib/lightdm/lightdm(N-/)
   {/usr/local,/usr,}{/sbin,/bin}(N-/)
   ${HOME}/bin/android-studio/sdk/{tools,platform-tools}(N-/)
   ${HOME}/bin/android-studio/bin(N-/)
+  ${HOME}/bin/genymotion(N-/)
   # mac用
   ${HOME}/adt-bundle-mac-x86_64-20131030/sdk/platform-tools(N-/)
   # 共通
