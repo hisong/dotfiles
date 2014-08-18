@@ -63,6 +63,8 @@ setopt hist_ignore_space
 setopt inc_append_history
 ## zshプロセス間でヒストリを共有する
 setopt share_history
+## 拡張globを使う
+setopt extended_glob
 
 # 補完
 ## 初期化
