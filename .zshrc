@@ -135,6 +135,12 @@ case ${OSTYPE} in
     ;;
 esac
 
+case ${OSTYPE} in
+  linux*)
+    alias open='gnome-open'
+    ;;
+esac
+
 # クリップボードへのコピー
 if which pbcopy > /dev/null 2>&1; then
   alias -g c='| pbcopy'
