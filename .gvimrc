@@ -1,8 +1,8 @@
 scriptencoding utf-8
 
 " colorscheme {{{
-"NeoBundleSource vim-hybrid
-NeoBundleSource vim-colors-solarized
+NeoBundleSource vim-hybrid
+"NeoBundleSource vim-colors-solarized
 " }}}
 
 " display {{{
@@ -15,9 +15,10 @@ set guioptions-=r
 set guioptions-=T
 set guicursor=a:blinkon0
 set visualbell t_vb=
-"colorscheme hybrid
-set background=light
-colorscheme solarized
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
+"set background=light
+"colorscheme solarized
 " }}}
 
 " list {{{
