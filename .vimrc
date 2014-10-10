@@ -4,10 +4,11 @@ scriptencoding utf-8
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
 " }}}
 
 " plugins {{{
+call neobundle#begin(expand('~/.vim/bundle/'))
+
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplete.vim'
@@ -47,6 +48,8 @@ NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundleLazy 'w0ng/vim-hybrid'
 NeoBundleLazy 'altercation/vim-colors-solarized'
+
+call neobundle#end()
 
 filetype plugin indent on
 " }}}
