@@ -8,6 +8,7 @@ URxvt*imLocale      : ja_JP.UTF-8
 URxvt*imFont        : xft:Ricty Discord:size=11:antialias=true
 URxvt*saveLines     : 20000
 URxvt*depth         : 32
+URxvt*geometry      : 120x40
 
 *background         : #1d1f21
 *foreground         : #c5c8c6
