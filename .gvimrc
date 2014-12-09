@@ -1,6 +1,7 @@
 scriptencoding utf-8
 
 " colorscheme {{{
+" gvim起動時のみcolorschemeを遅延ロード
 NeoBundleSource vim-hybrid
 "NeoBundleSource vim-colors-solarized
 " }}}
@@ -19,10 +20,6 @@ let g:hybrid_use_Xresources = 1
 colorscheme hybrid
 "set background=light
 "colorscheme solarized
-" }}}
-
-" list {{{
-set listchars=eol:↲,tab:»-,trail:-,nbsp:%,extends:»,precedes:«
 " }}}
 
 " font {{{
