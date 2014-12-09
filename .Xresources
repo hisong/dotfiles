@@ -3,9 +3,9 @@ URxvt*loginShell    : true
 URxvt*scrollBar     : false
 URxvt*font          : xft:Ricty Discord:size=11:antialias=true
 URxvt*inputMethod   : fcitx
-URxvt*preeditType   : OverTheSpot
 URxvt*imLocale      : ja_JP.UTF-8
 URxvt*imFont        : xft:Ricty Discord:size=11:antialias=true
+URxvt*preeditType   : OverTheSpot
 URxvt*saveLines     : 20000
 URxvt*depth         : 32
 URxvt*geometry      : 120x40
