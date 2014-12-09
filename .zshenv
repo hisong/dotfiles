@@ -1,6 +1,7 @@
 # 環境変数の設定
 ## LANG
 export LANG=ja_JP.UTF-8
+export VTE_CJK_WIDTH=1
 
 ## EDITOR
 export EDITOR=vim
