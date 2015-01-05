@@ -1,9 +1,12 @@
+set encoding=utf-8
 scriptencoding utf-8
 
 " colorscheme {{{
 " gvim起動時のみcolorschemeを遅延ロード
-NeoBundleSource vim-hybrid
-"NeoBundleSource vim-colors-solarized
+NeoBundleSource vim-colors-solarized
+"NeoBundleSource vim-hybrid
+"NeoBundleSource vim-tomorrow-theme
+"NeoBundleSource inkpot
 " }}}
 
 " display {{{
@@ -16,10 +19,12 @@ set guioptions-=r
 set guioptions-=T
 set guicursor=a:blinkon0
 set visualbell t_vb=
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
-"set background=light
-"colorscheme solarized
+"colorscheme Tomorrow-Night-Bright
+"let g:hybrid_use_Xresources = 1
+"colorscheme hybrid
+set background=light
+colorscheme solarized
+"colorscheme inkpot
 " }}}
 
 " font {{{
