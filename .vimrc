@@ -35,6 +35,7 @@ NeoBundle 'kana/vim-operator-user'
 NeoBundle 'kana/vim-operator-replace'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'kana/vim-submode'
+NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'osyo-manga/unite-fold'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'h1mesuke/vim-alignta'
@@ -47,8 +48,10 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundleLazy 'w0ng/vim-hybrid'
 NeoBundleLazy 'altercation/vim-colors-solarized'
+NeoBundleLazy 'w0ng/vim-hybrid'
+NeoBundleLazy 'chriskempson/vim-tomorrow-theme'
+NeoBundleLazy 'ciaranm/inkpot'
 
 call neobundle#end()
 
@@ -198,7 +201,7 @@ set noswapfile
 set directory=~/vimbackup
 " }}}
 
-"" encoding {{{
+" encoding {{{
 " □とか○の文字があってもカーソル位置がずれないようにする
 if exists('&ambiwidth')
     set ambiwidth=double
@@ -206,7 +209,7 @@ endif
 " }}}
 
 " keymap {{{
-let mapleader = "m"
+let g:mapleader = "m"
 inoremap <silent> <Esc> <Esc>:set iminsert=0<CR>
 inoremap <silent> <C-a> <Home>
 inoremap <silent> <C-e> <End>
