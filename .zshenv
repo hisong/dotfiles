@@ -12,6 +12,11 @@ export JAVA_HOME=/usr/lib/jvm/java-6-oracle
 ## ANDROID_HOME
 export ANDROID_HOME=${HOME}/bin/android-studio/sdk
 
+## python
+export WORKON_HOME=${HOME}/.virtualenvs
+export PROJECT_HOME=${HOME}/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
 ## path
 #--------------------------------------------------
 # typeset
