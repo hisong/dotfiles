@@ -6,9 +6,6 @@ export VTE_CJK_WIDTH=1
 ## EDITOR
 export EDITOR=vim
 
-## GIT_PAGER
-export GIT_PAGER="lv -c"
-
 ## Java
 export JAVA_HOME=/usr/lib/jvm/java-6-oracle
 
