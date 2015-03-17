@@ -38,6 +38,7 @@ path=(
   # 共通
   ${HOME}/bin(N-/)
   ${HOME}/.nodebrew/current/bin(N-/)
+  ${HOME}/.rbenv/bin(N-/)
   # linux用
   /usr/lib/lightdm/lightdm(N-/)
   {/usr/local,/usr,}{/sbin,/bin}(N-/)
@@ -54,6 +55,7 @@ typeset -gxU path
 ## fpath
 fpath=(
   ${HOME}/dotfiles/.zsh.d/functions/zsh-completions(N-/)
+  ${HOME}/.rbenv/completions(N-/)
   ${fpath}
 )
 typeset -gxU fpath
@@ -67,5 +69,10 @@ typeset -gxU manpath
 
 ## 重複削除
 typeset -gxU path cdpath fpath manpath ld_library_path include
+
+## rbenv
+if which rbenv > /dev/null 2>&1; then
+    eval "$(rbenv init -)"
+fi
 
 # vim:set ft=zsh sw=2 sts=2 nowrap:
