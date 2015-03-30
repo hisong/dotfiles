@@ -138,6 +138,8 @@ set hidden
 set shortmess+=I
 set term=xterm
 set t_Co=256
+set display=lastline
+set pumheight=10
 " }}}
 
 " syntax {{{
