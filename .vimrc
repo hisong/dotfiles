@@ -259,7 +259,7 @@ if has('autocmd')
     augroup MySettings
         autocmd!
         autocmd BufNewFile,BufRead *.html,*.css,*.xml setl shiftwidth=2 softtabstop=2 nowrap foldmethod=marker
-        autocmd BufNewFile,BufRead *.php,*.js,*.json setl shiftwidth=2 softtabstop=2 nowrap foldmethod=marker commentstring=//%s
+        autocmd BufNewFile,BufRead *.php,*.js,*.json setl shiftwidth=2 softtabstop=2 nowrap foldmethod=marker commentstring=//\ %s
         autocmd BufNewFile,BUfRead *.bat,*.log setl nowrap
         autocmd BufNewFile,BUfRead *.sh setl noexpandtab
         autocmd QuickFixCmdPost *grep* cwindow
