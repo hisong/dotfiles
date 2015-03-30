@@ -222,6 +222,7 @@ nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Leader>a ggVGy
 nnoremap <silent> <Leader>t :<C-u>tabnew<CR>
 nnoremap <Leader>/ /\v
+nnoremap Y y$
 noremap <silent> j gj
 noremap <silent> k gk
 noremap <CR> i<CR><Esc>
