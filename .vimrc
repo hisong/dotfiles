@@ -194,12 +194,13 @@ set shiftwidth=4
 set softtabstop=0
 " }}}
 
-" backup/swap {{{
+" backup/swap/undo {{{
 set backup
 set backupdir=~/vimbackup
 set browsedir=current
 set noswapfile
 set directory=~/vimbackup
+set undodir=~/vimbackup
 " }}}
 
 " encoding {{{
