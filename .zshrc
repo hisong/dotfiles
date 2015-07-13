@@ -125,6 +125,9 @@ bindkey '^N' history-beginning-search-forward-end
 bindkey '^R' history-incremental-pattern-search-backward
 
 # エイリアス
+## 素のvimを起動
+alias vi='vim -u NONE -N'
+
 ## ファイル表示
 case ${OSTYPE} in
   darwin*)
