@@ -22,6 +22,7 @@ set visualbell t_vb=
 "colorscheme Tomorrow-Night-Bright
 "let g:hybrid_use_Xresources = 1
 "colorscheme hybrid
+"set background=dark
 set background=light
 colorscheme solarized
 "colorscheme inkpot

@@ -14,7 +14,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim', {
             \   'build' : {
             \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -25,27 +24,15 @@ NeoBundle 'Shougo/vimproc.vim', {
             \ }
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'koron/codic-vim'
 NeoBundle 'kana/vim-operator-user'
 NeoBundle 'kana/vim-operator-replace'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'kana/vim-submode'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'osyo-manga/unite-fold'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'h1mesuke/vim-alignta'
-NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'rhysd/unite-codic.vim'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundleLazy 'altercation/vim-colors-solarized'
 NeoBundleLazy 'w0ng/vim-hybrid'
@@ -67,10 +54,6 @@ let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_file_mru_limit = 200
 let g:unite_source_file_mru_filename_format = ''
-" }}}
-
-" vimfiler " {{{
-let g:vimfiler_as_default_explorer = 1
 " }}}
 
 " neocomplete.vim " {{{
