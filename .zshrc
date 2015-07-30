@@ -151,25 +151,6 @@ elif which xclip > /dev/null 2>&1; then
   alias -g c='| xclip -i -sel c'
 fi
 
-# 検索関連関数定義
-if which w3m > /dev/null 2>&1; then
-  function ggl() {
-    if [ ${#} -eq 0 ]; then
-      w3m "https://www.google.co.jp/"
-    else
-      w3m "https://www.google.co.jp/search?ie=UTF-8&q=${1}"
-    fi
-  }
-
-  function ddg() {
-    if [ ${#} -eq 0 ]; then
-      w3m "https://duckduckgo.com/?kl=jp-jp&kp=-1&ki=-1"
-    else
-      w3m "https://duckduckgo.com/?kl=jp-jp&kp=-1&ki=-1&q=${1}"
-    fi
-  }
-fi
-
 compdef mosh=ssh
 
 # vim:set ft=zsh sw=2 sts=2 nowrap:
