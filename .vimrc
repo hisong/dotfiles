@@ -2,6 +2,7 @@ set encoding=utf-8
 scriptencoding utf-8
 
 " NeoBundle {{{
+if 0 | endif
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -12,8 +13,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimproc.vim', {
             \   'build' : {
             \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -22,6 +21,8 @@ NeoBundle 'Shougo/vimproc.vim', {
             \       'unix'      : 'make -f make_unix.mak',
             \   },
             \ }
+NeoBundle 'haya14busa/vim-migemo'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kana/vim-operator-user'
@@ -42,6 +43,8 @@ NeoBundleLazy 'ciaranm/inkpot'
 call neobundle#end()
 
 filetype plugin indent on
+
+NeoBundleCheck
 " }}}
 
 " plugins settings {{{
@@ -56,14 +59,8 @@ let g:unite_source_file_mru_limit = 200
 let g:unite_source_file_mru_filename_format = ''
 " }}}
 
-" neocomplete.vim " {{{
-let g:neocomplete#enable_at_startup = 1
-" }}}
-
-" gist " {{{
-let g:gist_detect_filetype = 1
-let g:gist_show_privates = 1
-let g:gist_put_url_to_clipboard_after_post = 1
+" ctrlp settings {{{
+let g:ctrlp_use_migemo = 1
 " }}}
 
 " operator-replace " {{{
@@ -84,23 +81,6 @@ call submode#map('winsize', 'n', '', '-', '<C-w>-')
 " lightline " {{{
 let g:lightline = {}
 let g:lightline.colorscheme = 'solarized'
-" }}}
-
-" clever-f " {{{
-let g:clever_f_ignore_case = 1
-let g:clever_f_smart_case = 1
-let g:clever_f_use_migemo = 1
-let g:clever_f_fix_key_direction = 1
-" }}}
-
-" EasyMotion " {{{
-let g:EasyMotion_do_mapping = 0
-" }}}
-
-" indentLine " {{{
-let g:indentLine_color_term = 111
-let g:indentLine_color_gui = '#708090'
-let g:indentLine_char = '|'
 " }}}
 
 " javascript-libraries-syntax " {{{
