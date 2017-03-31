@@ -6,6 +6,9 @@ export VTE_CJK_WIDTH=1
 ## EDITOR
 export EDITOR=vim
 
+## Go
+export GOPATH=${HOME}/go
+
 ## Java
 #export JAVA_HOME=/usr/lib/jvm/java-6-oracle
 
@@ -45,6 +48,7 @@ path=(
   ${HOME}/bin/android-studio/sdk/{tools,platform-tools}(N-/)
   ${HOME}/bin/android-studio/bin(N-/)
   ${HOME}/bin/genymotion(N-/)
+  ${GOPATH}/bin(N-/)
   # mac用
   ${HOME}/adt-bundle-mac-x86_64-20131030/sdk/platform-tools(N-/)
   # 共通
