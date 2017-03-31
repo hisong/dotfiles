@@ -61,7 +61,7 @@ typeset -gxU path
 
 ## fpath
 fpath=(
-  ${HOME}/dotfiles/.zsh.d/functions/zsh-completions(N-/)
+  ${HOME}/vcs/dotfiles/.zsh.d/functions/zsh-completions(N-/)
   ${HOME}/.rbenv/completions(N-/)
   ${fpath}
 )
