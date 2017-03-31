@@ -7,15 +7,15 @@ export VTE_CJK_WIDTH=1
 export EDITOR=vim
 
 ## Java
-export JAVA_HOME=/usr/lib/jvm/java-6-oracle
+#export JAVA_HOME=/usr/lib/jvm/java-6-oracle
 
 ## ANDROID_HOME
-export ANDROID_HOME=${HOME}/bin/android-studio/sdk
+#export ANDROID_HOME=${HOME}/bin/android-studio/sdk
 
 ## python
-export WORKON_HOME=${HOME}/.virtualenvs
-export PROJECT_HOME=${HOME}/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=${HOME}/.virtualenvs
+#export PROJECT_HOME=${HOME}/Devel
+#source /usr/local/bin/virtualenvwrapper.sh
 
 ## path
 #--------------------------------------------------
