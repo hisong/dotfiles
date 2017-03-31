@@ -9,6 +9,9 @@ export EDITOR=vim
 ## Go
 export GOPATH=${HOME}/go
 
+## TERM
+export TERM=xterm-256color
+
 ## Java
 #export JAVA_HOME=/usr/lib/jvm/java-6-oracle
 
