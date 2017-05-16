@@ -1,50 +1,38 @@
 set encoding=utf-8
 scriptencoding utf-8
 
-" NeoBundle {{{
-if 0 | endif
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-" }}}
+" minpac {{{
+set packpath^=~/.vim
+packadd minpac
 
-" plugins {{{
-call neobundle#begin(expand('~/.vim/bundle/'))
+call minpac#init()
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-            \   'build' : {
-            \       'windows'   : 'echo "Sorry, cannot update vimproc binary file in Windows."',
-            \       'cygwin'    : 'make -f make_cygwin.mak',
-            \       'mac'       : 'make -f make_mac.mak',
-            \       'unix'      : 'make -f make_unix.mak',
-            \   },
-            \ }
-NeoBundle 'haya14busa/vim-migemo'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kana/vim-operator-user'
-NeoBundle 'kana/vim-operator-replace'
-NeoBundle 'kana/vim-fakeclip'
-NeoBundle 'kana/vim-submode'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'h1mesuke/vim-alignta'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundleLazy 'altercation/vim-colors-solarized'
-NeoBundleLazy 'w0ng/vim-hybrid'
-NeoBundleLazy 'chriskempson/vim-tomorrow-theme'
-NeoBundleLazy 'ciaranm/inkpot'
+call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-call neobundle#end()
+call minpac#add('Shougo/unite.vim')
+call minpac#add('Shougo/vimproc.vim')
+call minpac#add('haya14busa/vim-migemo')
+call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('kana/vim-operator-user')
+call minpac#add('kana/vim-operator-replace')
+call minpac#add('kana/vim-fakeclip')
+call minpac#add('kana/vim-submode')
+call minpac#add('itchyny/lightline.vim')
+call minpac#add('h1mesuke/vim-alignta')
+call minpac#add('othree/html5.vim')
+call minpac#add('othree/javascript-libraries-syntax.vim')
+call minpac#add('hail2u/vim-css3-syntax')
+call minpac#add('vim-jp/vimdoc-ja')
+call minpac#add('altercation/vim-colors-solarized')
+call minpac#add('w0ng/vim-hybrid')
+call minpac#add('chriskempson/vim-tomorrow-theme')
+call minpac#add('ciaranm/inkpot')
+
+packloadall
 
 filetype plugin indent on
-
-NeoBundleCheck
 " }}}
 
 " plugins settings {{{
