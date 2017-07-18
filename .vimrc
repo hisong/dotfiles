@@ -176,6 +176,7 @@ nnoremap <silent> <Esc><Esc> :<C-u>noh<CR><Esc>
 nnoremap <silent> <Leader>a ggVGy
 nnoremap <silent> <Leader>t :<C-u>tabnew<CR>
 nnoremap <Leader>/ /\v
+nnoremap <Leader>mu :<C-u>call minpac#update()<CR>
 nnoremap Y y$
 noremap <silent> j gj
 noremap <silent> k gk
@@ -191,7 +192,6 @@ nnoremap [unite]b :<C-u>Unite buffer<CR>
 nnoremap [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap [unite]m :<C-u>Unite file_mru<CR>
 nnoremap [unite]r :<C-u>Unite -buffer-name=register register<CR>
-nnoremap [unite]u :<C-u>Unite neobundle/update:all<CR>
 nnoremap [unite]y :<C-u>Unite history/yank<CR>
 " }}}
 
