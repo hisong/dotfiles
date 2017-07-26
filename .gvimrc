@@ -1,14 +1,6 @@
 set encoding=utf-8
 scriptencoding utf-8
 
-" colorscheme {{{
-" gvim起動時のみcolorschemeを遅延ロード
-NeoBundleSource vim-colors-solarized
-"NeoBundleSource vim-hybrid
-"NeoBundleSource vim-tomorrow-theme
-"NeoBundleSource inkpot
-" }}}
-
 " display {{{
 set lines=48
 set columns=138
