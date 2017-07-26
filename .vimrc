@@ -9,8 +9,6 @@ call minpac#init()
 
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-call minpac#add('Shougo/unite.vim')
-call minpac#add('Shougo/vimproc.vim')
 call minpac#add('haya14busa/vim-migemo')
 call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('tpope/vim-surround')
@@ -38,13 +36,6 @@ filetype plugin indent on
 " plugins settings {{{
 " Kaoriya " {{{
 let g:plugin_verifyenc_disable = 1
-" }}}
-
-" unite.vim " {{{
-let g:unite_enable_start_insert = 1
-let g:unite_source_history_yank_enable = 1
-let g:unite_source_file_mru_limit = 200
-let g:unite_source_file_mru_filename_format = ''
 " }}}
 
 " ctrlp settings {{{
@@ -184,17 +175,6 @@ noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
 nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 
-" Unite keymap " {{{
-nnoremap [unite] <Nop>
-nmap <Leader>u [unite]
-nnoremap [unite]a :<C-u>Unite buffer file_mru file history/yank<CR>
-nnoremap [unite]b :<C-u>Unite buffer<CR>
-nnoremap [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap [unite]m :<C-u>Unite file_mru<CR>
-nnoremap [unite]r :<C-u>Unite -buffer-name=register register<CR>
-nnoremap [unite]y :<C-u>Unite history/yank<CR>
-" }}}
-
 " fakeclip keymap " {{{
 if has('unix')
     noremap <silent> <Leader>y "+y
@@ -203,10 +183,6 @@ if has('unix')
     noremap <silent> <Leader>P "+P
 endif
 " }}}
-
-" unite-codic.vim keymap"{{{
-nnoremap [unite]c :<C-u>Unite codic<CR>
-"}}}
 " }}}
 
 " autocmd {{{
