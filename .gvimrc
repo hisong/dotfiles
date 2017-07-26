@@ -21,8 +21,13 @@ colorscheme solarized
 " }}}
 
 " font {{{
-set guifont=Ricty\ Discord\ 10
-set guifontwide=Ricty\ Discord\ 10
+if has('win32') || has('win64')
+    set guifont=MeiryoKe_Gothic:h10
+    set guifontwide=MeiryoKe_Gothic:h10
+else
+    set guifont=Ricty\ Discord\ 10
+    set guifontwide=Ricty\ Discord\ 10
+endif
 " }}}
 
 " vim: foldmethod=marker
