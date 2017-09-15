@@ -12,9 +12,6 @@ export GOPATH=${HOME}/go
 ## TERM
 export TERM=xterm-256color
 
-## Java
-#export JAVA_HOME=/usr/lib/jvm/java-6-oracle
-
 ## ANDROID_HOME
 #export ANDROID_HOME=${HOME}/bin/android-studio/sdk
 
