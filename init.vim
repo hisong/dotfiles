@@ -4,8 +4,8 @@ let $CONFIG = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HO
 let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOME
 
 " Windows版Python設定
-if has('windows')
-    let python3_host_prog="C:\Users\pc0001402\AppData\Local\Programs\Python\Python36\python.exe"
+if has('win64')
+    let g:python3_host_prog="C:\Users\pc0001402\AppData\Local\Programs\Python\Python36\python.exe"
 endif
 " }}}
 
@@ -163,5 +163,7 @@ if has('autocmd')
     augroup END
 endif
 " }}}
+
+colorscheme NeoSolarized
 
 " vim: foldmethod=marker:
