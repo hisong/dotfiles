@@ -5,7 +5,7 @@ let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOM
 
 " Windows版Python設定
 if has('win64')
-    let g:python3_host_prog="C:\Users\pc0001402\AppData\Local\Programs\Python\Python36\python.exe"
+    let g:python3_host_prog="C:/Users/pc0001402/AppData/Local/Programs/Python/Python36/python.exe"
 endif
 " }}}
 
