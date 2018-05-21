@@ -149,6 +149,7 @@ noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
 nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 tnoremap <silent> <C-[> <C-\><C-n>
+" }}}
 
 " autocmd {{{
 if has('autocmd')
@@ -163,7 +164,5 @@ if has('autocmd')
     augroup END
 endif
 " }}}
-
-colorscheme NeoSolarized
 
 " vim: foldmethod=marker:
