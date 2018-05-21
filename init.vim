@@ -1,3 +1,50 @@
+" ENV {{{
+let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
+let $CONFIG = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME
+let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOME
+" }}}
+
+" dein {{{
+" dein.vimディレクトリの設定
+let s:dein_dir = expand('$CACHE/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+let s:toml_dir = expand('$CONFIG/nvim')
+
+if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim ' . s:dein_repo_dir
+endif
+execute 'set runtimepath^=' . s:dein_repo_dir
+
+if dein#load_state(s:dein_dir)
+    call dein#begin(s:dein_dir)
+
+    call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
+    call dein#load_toml(s:toml_dir . '/dein_lazy.toml', {'lazy': 1})
+
+    call dein#end()
+    call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
+if dein#check_install()
+    call dein#install()
+endif
+" }}}
+
+" deoplete {{{
+let g:deoplete#auto_complete_delay = 0
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_camel_case = 0
+let g:deoplete#enable_ignore_case = 0
+let g:deoplete#enable_refresh_always = 0
+let g:deoplete#auto_refresh_delay = 100
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#file#enable_buffer_path = 1
+let g:deoplete#max_list = 10000
+" }}}
+
 " display {{{
 set cursorline
 set number
@@ -12,6 +59,7 @@ set shortmess+=I
 set t_Co=256
 set display=lastline
 set pumheight=10
+set ambiwidth=double
 set termguicolors
 " }}}
 
@@ -27,7 +75,24 @@ set autoindent
 set smartindent
 set showmatch
 set backspace=indent,eol,start
+
+" clipboard {{{
 set clipboard+=unnamedplus
+if system('uname -a | grep -i microsoft') != ""
+    let g:clipboard = {
+                \   'name'  : 'myClipboard',
+                \   'copy'  : {
+                \       '+' : 'win32yank.exe -i',
+                \       '*' : 'win32yank.exe -i',
+                \   },
+                \   'paste' : {
+                \       '+' : 'win32yank.exe -o',
+                \       '*' : 'win32yank.exe -o',
+                \   },
+                \   'cache_enabled' : 1,
+                \   }
+endif
+" }}}
 " }}}
 
 " fold {{{
@@ -78,16 +143,7 @@ noremap <silent> k gk
 noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
 nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
-
-" fakeclip keymap " {{{
-if has('unix')
-    noremap <silent> <Leader>y "+y
-    noremap <silent> <Leader>Y "+Y
-    noremap <silent> <Leader>p "+p
-    noremap <silent> <Leader>P "+P
-endif
-" }}}
-" }}}
+tnoremap <silent> <C-[> <C-\><C-n>
 
 " autocmd {{{
 if has('autocmd')

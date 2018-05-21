@@ -1,0 +1,11 @@
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+hook_post_source = '''
+    " デフォルトのプロンプトを変更
+    call denite#custom#option('default', 'prompt', '>')
+
+    " denite/insert モード時は C- で移動できるようにする
+    call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>')
+    call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>')
+'''
