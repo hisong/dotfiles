@@ -2,6 +2,11 @@
 let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
 let $CONFIG = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME
 let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOME
+
+" Windows版Python設定
+if has('windows')
+    let python3_host_prog="C:\Users\pc0001402\AppData\Local\Programs\Python\Python36\python.exe"
+endif
 " }}}
 
 " dein {{{
