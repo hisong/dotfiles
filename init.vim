@@ -50,6 +50,11 @@ let g:deoplete#file#enable_buffer_path = 1
 let g:deoplete#max_list = 10000
 " }}}
 
+" neoterm {{{
+let g:neoterm_autoinsert = 1
+let g:neoterm_autoscroll = 1
+" }}}
+
 " display {{{
 set cursorline
 set number
@@ -149,6 +154,23 @@ noremap <CR> i<CR><Esc>
 noremap <silent> J gJ
 nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 tnoremap <silent> <C-[> <C-\><C-n>
+
+" Denite keymap {{{
+nnoremap [denite] <Nop>
+nmap <Leader>d [denite]
+nnoremap [denite]a :<C-u>Denite buffer file/rec<CR>
+nnoremap [denite]b :<C-u>Denite buffer<CR>
+nnoremap [denite]f :<C-u>Denite file/rec<CR>
+
+nnoremap <C-p> :<C-u>Denite buffer file/rec<CR>
+" }}}
+
+" neoterm keymap {{{
+nnoremap [neoterm] <Nop>
+nmap <Leader>t [neoterm]
+nnoremap [neoterm]v :vertical :Tnew<CR>
+nnoremap [neoterm]s :belowright :Tnew<CR>
+" }}}
 " }}}
 
 " autocmd {{{

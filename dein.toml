@@ -5,4 +5,10 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
+repo = 'kassio/neoterm'
+
+[[plugins]]
 repo = 'icymind/NeoSolarized'
+
+[[plugins]]
+repo = 'rking/ag.vim'
