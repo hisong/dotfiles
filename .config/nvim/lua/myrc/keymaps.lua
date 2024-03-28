@@ -1,0 +1,25 @@
+-- keymap {{{
+vim.g.mapleader = 'm'
+vim.keymap.set('i', '<C-a>', '<C-G>U<Home>', {silent = true})
+vim.keymap.set('i', '<C-e>', '<C-G>U<End>', {silent = true})
+vim.keymap.set('i', '<C-p>', '<C-G>U<Up>', {silent = true})
+vim.keymap.set('i', '<C-n>', '<C-G>U<Down>', {silent = true})
+vim.keymap.set('i', '<C-b>', '<C-G>U<Left>', {silent = true})
+vim.keymap.set('i', '<C-f>', '<C-G>U<Right>', {silent = true})
+vim.keymap.set('i', 'jj', '<Esc>')
+vim.keymap.set('v', 'v', '$h')
+vim.keymap.set('n', '<Esc><Esc>', ':<C-u>noh<CR><Esc>', {silent = true})
+vim.keymap.set('n', '<Leader>a', 'ggVGy', {silent = true})
+vim.keymap.set('n', '<Leader>t', ':<C-u>tabnew<CR>', {silent = true})
+vim.keymap.set('n', '<Leader>b', ':<C-u>enew<CR>', {silent = true})
+vim.keymap.set('n', '<Leader>/', '/\v')
+vim.keymap.set('n', '<Leader>uu', ':<C-u>PackerUpdate<CR>')
+vim.keymap.set('n', 'Y', 'y$')
+vim.keymap.set('', 'j', 'gj', {silent = true})
+vim.keymap.set('', 'k', 'gk', {silent = true})
+vim.keymap.set('', 'gj', 'j', {silent = true})
+vim.keymap.set('', 'gk', 'k', {silent = true})
+vim.keymap.set('', '<CR>', 'i<CR><Esc>')
+vim.keymap.set('', 'J', 'gJ', {silent = true})
+-- }}}
+
