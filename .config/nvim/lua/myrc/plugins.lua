@@ -12,11 +12,6 @@ return require('packer').startup(function(use)
             {'vim-denops/denops.vim'},
         },
     }
-    use {
-        'delphinus/skkeleton_indicator.nvim',
-        after = {
-            {'vim-skk/skkeleton'},
-        },
-    }
+    use 'delphinus/skkeleton_indicator.nvim'
 end)
 
