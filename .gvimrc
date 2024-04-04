@@ -8,7 +8,8 @@ set showtabline=2
 set guioptions=gLt
 set guicursor=a:blinkon0
 set visualbell t_vb=
-colorscheme wombat
+set background=light
+colorscheme iceberg
 " }}}
 
 " font {{{

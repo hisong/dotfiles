@@ -24,6 +24,8 @@ Jetpack 'itchyny/lightline.vim'
 Jetpack 'h1mesuke/vim-alignta'
 Jetpack 'vim-jp/vimdoc-ja'
 Jetpack 'sheerun/vim-wombat-scheme'
+Jetpack 'NLKNguyen/papercolor-theme'
+Jetpack 'cocopon/iceberg.vim'
 call jetpack#end()
 
 filetype plugin indent on
@@ -96,7 +98,7 @@ call submode#map('winsize', 'n', '', '-', '<C-w>-')
 let g:lightline_skk_announce = v:true
 
 let g:lightline = {
-\   'colorscheme': 'wombat',
+\   'colorscheme': 'iceberg',
 \   'active': {
 \       'left': [ [ 'mode', 'paste', 'skk_mode' ],
 \                 [ 'readonly', 'filename', 'modified' ] ]
