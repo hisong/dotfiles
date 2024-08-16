@@ -6,12 +6,16 @@ vim.opt.number = true
 vim.opt.ruler = true
 vim.opt.wildmenu = true
 vim.opt.wrap = true
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 vim.opt.showcmd = true
 vim.opt.hidden = true
 vim.opt.shortmess:append('I')
 vim.opt.display = 'lastline'
 vim.opt.pumheight = 10
+-- }}}
+
+-- shell {{{
+vim.opt.shell='pwsh'
 -- }}}
 
 -- search {{{
@@ -63,7 +67,6 @@ vim.opt.softtabstop = 0
 -- backup/swap/undo {{{
 vim.opt.backup = true
 vim.opt.backupdir = vim.fn.expand('~/.config/vimbackup')
-vim.opt.browsedir = 'current'
 vim.opt.swapfile = true
 vim.opt.directory = vim.fn.expand('~/.config/swp')
 vim.opt.undodir = vim.fn.expand('~/.config/undo')
@@ -73,21 +76,22 @@ vim.opt.undodir = vim.fn.expand('~/.config/undo')
 -- .gvimrc {{{
 -- display {{{
 vim.opt.showtabline = 2
-vim.opt.guioptions = 'gLt'
 vim.opt.guicursor = 'a:blinkon0'
-vim.opt.background = 'dark'
+--vim.opt.background = 'dark'
 
+vim.g.lightline_skk_announce = true
 vim.g.lightline = {
-    colorscheme = 'wombat',
+    colorscheme = 'Tomorrow_Night_Eighties',
     active = {
         left = {
-            { 'mode', 'paste' },
+            { 'mode', 'paste', 'skk_mode' },
             { 'readonly', 'filename', 'modified' },
         },
     },
+    component_function = {
+        skk_mode = 'statusline_skk#mode',
+    },
 }
-
-vim.cmd('colorscheme wombat')
 -- }}}
 
 -- font {{{

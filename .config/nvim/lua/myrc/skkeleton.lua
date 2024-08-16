@@ -27,7 +27,6 @@ vim.fn['skkeleton#config']({
     selectCandidateKeys = 'asdfjkl',
     setUndoPoint = false,
     showCandidatesCount = 1,
---    sources = {'skk_dictionary'},
     sources = {'deno_kv'},
     userDictionary = vim.fn.expand('~/.config/skk/my_jisyo'),
 })
@@ -43,7 +42,4 @@ vim.fn['skkeleton#register_kanatable']('rom', {
 vim.keymap.set('i', '<C-j>', '<Plug>(skkeleton-enable)')
 vim.keymap.set('c', '<C-j>', '<Plug>(skkeleton-enable)')
 vim.keymap.set('t', '<C-j>', '<Plug>(skkeleton-enable)')
-
--- skkeleton_indicator
-require('skkeleton_indicator').setup {}
 

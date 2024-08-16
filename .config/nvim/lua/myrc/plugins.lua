@@ -3,7 +3,6 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'sheerun/vim-wombat-scheme'
     use 'itchyny/lightline.vim'
     use 'nvim-tree/nvim-web-devicons'
     use {
@@ -12,6 +11,6 @@ return require('packer').startup(function(use)
             {'vim-denops/denops.vim'},
         },
     }
-    use 'delphinus/skkeleton_indicator.nvim'
+    use 'yasunori0418/statusline_skk.vim'
 end)
 

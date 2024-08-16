@@ -7,74 +7,19 @@ set packpath^=~/.vim
 packadd vim-jetpack
 call jetpack#begin('~/.vim')
 Jetpack 'tani/vim-jetpack', {'opt': 1}
-Jetpack 'vim-denops/denops.vim'
-Jetpack 'vim-skk/skkeleton'
-Jetpack 'yasunori0418/statusline_skk.vim'
-Jetpack 'haya14busa/vim-migemo'
-Jetpack 'ctrlpvim/ctrlp.vim'
-Jetpack 'preservim/nerdtree'
 Jetpack 'tpope/vim-surround'
-Jetpack 'tpope/vim-fugitive'
-Jetpack 'easymotion/vim-easymotion'
 Jetpack 'kana/vim-operator-user'
 Jetpack 'kana/vim-operator-replace'
-Jetpack 'kana/vim-fakeclip'
 Jetpack 'kana/vim-submode'
 Jetpack 'itchyny/lightline.vim'
-Jetpack 'h1mesuke/vim-alignta'
 Jetpack 'vim-jp/vimdoc-ja'
-Jetpack 'sheerun/vim-wombat-scheme'
 Jetpack 'NLKNguyen/papercolor-theme'
-Jetpack 'cocopon/iceberg.vim'
 call jetpack#end()
 
 filetype plugin indent on
 " }}}
 
 " plugins settings {{{
-" deno " {{{
-let g:denops#server#deno_args = [
-\ '-q',
-\ '--no-lock',
-\ '-A',
-\ '--unstable-kv',
-\ ]
-" }}}
-
-" skkeleton " {{{
-call skkeleton#config({
-\   'databasePath': "~/.config/skk/my_denokv",
-\   'eggLikeNewline': v:true,
-\   'globalDictionaries': [
-\       "~/.config/skk/dict/SKK-JISYO.L",
-\       "~/.config/skk/dict/SKK-JISYO.jinmei",
-\       "~/.config/skk/dict/SKK-JISYO.itaiji",
-\       "~/.config/skk/dict/SKK-JISYO.geo",
-\       "~/.config/skk/dict/SKK-JISYO.station",
-\       "~/.config/skk/dict/SKK-JISYO.propernoun",
-\       "~/.config/skk/dict/SKK-JISYO.law",
-\       "~/.config/skk/dict/SKK-JISYO.emoji",
-\       "~/.config/skk/dict/SKK-JISYO.edict",
-\       "~/.config/skk/dict/SKK-JISYO.edict2",
-\       "~/.config/skk/dict/zipcode/SKK-JISYO.zipcode",
-\   ],
-\   'immediatelyCancel': v:false,
-\   'keepState': v:true,
-\   'selectCandidateKeys': "asdfjkl",
-\   'setUndoPoint': v:false,
-\   'showCandidatesCount': 1,
-\   'sources': ['deno_kv'],
-\   'userDictionary': "~/.config/skk/my_jisyo",
-\})
-
-call skkeleton#register_kanatable('rom', {
-\   'z;': ["：", ""],
-\   'z:': ["；", ""],
-\   '(': ["（", ""],
-\   ')': ["）", ""],
-\})
-" }}}
-
 " Kaoriya " {{{
 let g:plugin_verifyenc_disable = 1
 " }}}
@@ -94,17 +39,11 @@ call submode#map('winsize', 'n', '', '+', '<C-w>+')
 call submode#map('winsize', 'n', '', '-', '<C-w>-')
 " }}}
 
-" lightline " {{{
-let g:lightline_skk_announce = v:true
-
 let g:lightline = {
-\   'colorscheme': 'iceberg',
+\   'colorscheme': 'PaperColor',
 \   'active': {
-\       'left': [ [ 'mode', 'paste', 'skk_mode' ],
+\       'left': [ [ 'mode', 'paste' ],
 \                 [ 'readonly', 'filename', 'modified' ] ]
-\   },
-\   'component_function': {
-\       'skk_mode': 'g:lightline_skk#mode',
 \   },
 \}
 " }}}
@@ -137,8 +76,14 @@ if has('unix')
     set termguicolors
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    " }}}
 endif
 " }}}
+
+" shell {{{
+if has('win32') || has('win64')
+    set shell=pwsh
+endif
 " }}}
 
 " syntax {{{
@@ -239,25 +184,6 @@ noremap <silent> gj j
 noremap <silent> gk k
 noremap <silent> J gJ
 nmap <silent> <Leader>vs :vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
-
-" skkeleton keymap " {{{
-imap <C-j> <Plug>(skkeleton-enable)
-cmap <C-j> <Plug>(skkeleton-enable)
-tmap <C-j> <Plug>(skkeleton-enable)
-" }}}
-
-" easy-motion keymap " {{{
-map <Leader>w <Plug>(easymotion-prefix)
-" }}}
-
-" fakeclip keymap " {{{
-if has('unix')
-    noremap <silent> <Leader>y "+y
-    noremap <silent> <Leader>Y "+Y
-    noremap <silent> <Leader>p "+p
-    noremap <silent> <Leader>P "+P
-endif
-" }}}
 " }}}
 
 " autocmd {{{
