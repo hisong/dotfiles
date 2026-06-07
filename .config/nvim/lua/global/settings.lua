@@ -16,7 +16,6 @@ vim.opt.showtabline = 2
 vim.opt.guicursor = 'a:blinkon0'
 vim.opt.background = 'light'
 vim.opt.termguicolors = true
-vim.cmd('colorscheme PaperColor')
 
 -- shell
 --vim.opt.shell = 'pwsh'
