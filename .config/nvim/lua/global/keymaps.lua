@@ -17,14 +17,14 @@ vim.keymap.set('n', 'Y', 'y$')
 vim.keymap.set('', 'J', 'gJ', {silent = true})
 
 if is_linux then
-  vim.keymap.set('n', '<Leader>uu', ':<C-u>Lazy update<CR>')
+    vim.keymap.set('n', '<Leader>uu', ':<C-u>Lazy update<CR>')
 else
-  vim.keymap.set('n', '<Leader>uu', ':<C-u>JetpackSync<CR>')
+    vim.keymap.set('n', '<Leader>uu', ':<C-u>JetpackSync<CR>')
 end
 
 if is_wsl then
-  vim.keymap.set('n', '<Leader>a', 'ggVG"+y', {silent = true})
-  vim.keymap.set('n', '<Leader>p', '"+p', {silent = true})
+    vim.keymap.set('n', '<Leader>a', 'ggVG"+y', {silent = true})
+    vim.keymap.set('n', '<Leader>p', '"+p', {silent = true})
 else
-  vim.keymap.set('n', '<Leader>a', 'ggVGy', {silent = true})
+    vim.keymap.set('n', '<Leader>a', 'ggVGy', {silent = true})
 end
