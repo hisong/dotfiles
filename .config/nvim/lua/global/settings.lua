@@ -1,4 +1,6 @@
 -- display
+local is_wsl = vim.fn.exists('$WSL_DISTRO_NAME') == 1
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.ruler = true
@@ -37,7 +39,22 @@ vim.opt.matchpairs:append({'（:）', '「:」', '『:』', '【:】', '［:］'
 vim.opt.startofline = true
 vim.opt.mouse = ''
 vim.opt.backspace = 'indent,eol,start'
-vim.opt.clipboard:append{'unnamedplus'}
+if is_wsl then
+    vim.g.clipboard = {
+        name = "win32yank-wsl",
+        copy = {
+            ["+"] = "win32yank -i --crlf",
+            ["*"] = "win32yank -i --crlf",
+        },
+        paste = {
+            ["+"] = "win32yank -o --lf",
+            ["*"] = "win32yank -o --lf",
+        },
+        cache_enabled = 0,
+    }
+else
+    vim.opt.clipboard:append{'unnamedplus'}
+end
 
 -- fold
 vim.opt.foldmethod = 'marker'
