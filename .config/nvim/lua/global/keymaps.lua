@@ -1,5 +1,4 @@
 -- keymaps
-local is_linux = vim.loop.os_uname().sysname == 'Linux'
 local is_wsl = vim.fn.exists('$WSL_DISTRO_NAME') == 1
 
 vim.g.mapleader = 'm'
@@ -15,12 +14,7 @@ vim.keymap.set('n', '<Leader>n', ':<C-u>enew<CR>', {silent = true})
 vim.keymap.set('n', '<Leader>/', '/\v')
 vim.keymap.set('n', 'Y', 'y$')
 vim.keymap.set('', 'J', 'gJ', {silent = true})
-
-if is_linux then
-    vim.keymap.set('n', '<Leader>uu', ':<C-u>Lazy update<CR>')
-else
-    vim.keymap.set('n', '<Leader>uu', ':<C-u>JetpackSync<CR>')
-end
+vim.keymap.set('n', '<Leader>uu', ':<C-u>Lazy update<CR>')
 
 if is_wsl then
     vim.keymap.set('n', '<Leader>a', 'ggVG"+y', {silent = true})
