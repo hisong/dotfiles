@@ -1,5 +1,6 @@
 -- display
 local is_wsl = vim.fn.exists('$WSL_DISTRO_NAME') == 1
+local is_linux = vim.loop.os_uname().sysname == 'Linux'
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -12,15 +13,15 @@ vim.opt.hidden = true
 vim.opt.shortmess:append('I')
 vim.opt.display = 'lastline'
 vim.opt.pumheight = 10
---vim.opt.pumblend = 10
---vim.opt.winblend = 10
 vim.opt.showtabline = 2
 vim.opt.guicursor = 'a:blinkon0'
 vim.opt.background = 'light'
 vim.opt.termguicolors = true
 
 -- shell
---vim.opt.shell = 'pwsh'
+if not is_linux then
+    vim.opt.shell = 'pwsh'
+end
 
 -- search
 vim.opt.ignorecase = true
@@ -87,4 +88,3 @@ vim.opt.undodir = vim.fn.expand('~/.config/nvim/undo')
 
 -- ambiguous
 vim.opt.ambiwidth = 'double'
-
