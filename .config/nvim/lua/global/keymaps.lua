@@ -18,7 +18,7 @@ vim.keymap.set('n', '<Leader>uu', ':<C-u>Lazy update<CR>')
 
 if is_wsl then
     vim.keymap.set('n', '<Leader>a', 'ggVG"+y', {silent = true})
-    vim.keymap.set('n', '<Leader>y', '"+y', {silent = true})
+    vim.keymap.set({'n', 'v'}, '<Leader>y', '"+y', {silent = true})
     vim.keymap.set('n', '<Leader>p', '"+p', {silent = true})
     vim.keymap.set('n', '<Leader>P', '"+P', {silent = true})
 else
