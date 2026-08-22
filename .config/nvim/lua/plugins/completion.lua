@@ -4,28 +4,14 @@ return {
         'Shougo/ddc.vim',
         dependencies = {
             'vim-denops/denops.vim',
-        },
-    },
-    {
-        'Shougo/pum.vim'
-    },
-    {
-        'Shougo/ddc-ui-pum',
-        dependencies = {
-            'Shougo/ddc.vim',
+            'vim-skk/skkeleton',
             'Shougo/pum.vim',
+            'Shougo/ddc-ui-pum',
+            'Shougo/ddc-filter-matcher_head',
+            'Shougo/ddc-filter-sorter_rank',
         },
-    },
-    {
-        'Shougo/ddc-filter-matcher_head',
-        dependencies = {
-            'Shougo/ddc.vim',
-        },
-    },
-    {
-        'Shougo/ddc-filter-sorter_rank',
-        dependencies = {
-            'Shougo/ddc.vim',
-        },
+        config = function()
+            require('plugin_settings.ddc')
+        end,
     },
 }
