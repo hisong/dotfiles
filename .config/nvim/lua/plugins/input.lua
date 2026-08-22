@@ -6,7 +6,7 @@ return {
             'vim-denops/denops.vim',
         },
         config = function()
-            require('plugin_settings/skkeleton')
+            require('plugin_settings.skkeleton')
         end,
     },
     {
@@ -15,7 +15,7 @@ return {
             'vim-skk/skkeleton',
         },
         config = function()
-            require('plugin_settings/skkeleton_indicator')
+            require('plugin_settings.skkeleton_indicator')
         end,
     },
 }
