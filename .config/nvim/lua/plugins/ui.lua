@@ -3,7 +3,14 @@ return {
     {
         'itchyny/lightline.vim',
         init = function()
-            require('plugin_settings/lightline')
+            vim.g.lightline = {
+                active = {
+                    left = {
+                        { 'mode', 'paste' },
+                        { 'readonly', 'filename', 'modified' },
+                    },
+                },
+            }
         end,
     },
 }
