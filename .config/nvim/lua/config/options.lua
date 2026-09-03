@@ -1,7 +1,6 @@
 -- display
 local is_wsl = vim.fn.exists('$WSL_DISTRO_NAME') == 1
 local is_linux = vim.loop.os_uname().sysname == 'Linux'
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.ruler = true
