@@ -1,5 +1,3 @@
-local is_linux = vim.loop.os_uname().sysname == 'Linux'
-
 -- lazy.nvim bootstrap
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -12,19 +10,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {}
-
-vim.list_extend(plugins, require('plugins.denops'))
-vim.list_extend(plugins, require('plugins.input'))
-vim.list_extend(plugins, require('plugins.completion'))
-vim.list_extend(plugins, require('plugins.markdown'))
-vim.list_extend(plugins, require('plugins.ui'))
-
--- Orgmode / Linux only
-if is_linux then
-    vim.list_extend(plugins, require('plugins.orgmode'))
-end
-
-require('lazy').setup(plugins, {
+-- lua/plugins/*.luaを自動読み込み
+-- OS分岐は各specのcondで表現する。
+require('lazy').setup('plugins', {
     rocks = { enabled = false },
 })
