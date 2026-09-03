@@ -4,7 +4,12 @@ return {
         'vim-denops/denops.vim',
         lazy = false,
         init = function()
-            require('plugin_settings/deno')
+            vim.g['denops#server#deno_args'] = {
+                '-q',
+                '--no-lock',
+                '-A',
+                '--unstable-kv',
+            }
         end,
     },
 }
