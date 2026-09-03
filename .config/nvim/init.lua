@@ -1,10 +1,8 @@
 vim.opt.fileformats = 'unix,dos,mac'
 
--- plugins
-require('plugins')
+-- core（mapleaderなどをプラグイン読み込み前に確定させる）
+require('config.options')
+require('config.keymaps')
 
--- global_settings
-require('global.settings')
-
--- global_keymaps
-require('global.keymaps')
+-- plugin manager
+require('config.lazy')
